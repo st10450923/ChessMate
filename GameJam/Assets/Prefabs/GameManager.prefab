@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1041164099409541154}
   - component: {fileID: 7311985958907924103}
   - component: {fileID: 3070116817928069987}
+  - component: {fileID: 7068341742167990235}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -77,9 +78,9 @@ MonoBehaviour:
   flipDuration: 0.8
   pieceHidePoint: 0.45
   pieceShowPoint: 0.55
-  chessBoardMaterial: {fileID: 0}
-  checkersBoardMaterial: {fileID: 0}
-  boardRenderer: {fileID: 0}
+  chessBoardSprite: {fileID: 4050052909907349757, guid: e8ca367d5748f4144af9cb26ead2a9e8, type: 3}
+  checkersBoardSprite: {fileID: 4050052909907349757, guid: e8ca367d5748f4144af9cb26ead2a9e8, type: 3}
+  boardSpriteRenderer: {fileID: 0}
   flipSound: {fileID: 0}
   audioSource: {fileID: 3070116817928069987}
   OnFlipStarted:
@@ -100,6 +101,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c1ac692a2acf34bb84b61b57abdc7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  gameManager: {fileID: 2789186462702561301}
+  turnLabel: {fileID: 0}
+  phaseLabel: {fileID: 0}
+  switchCountdownLabel: {fileID: 0}
+  switchWarningPanel: {fileID: 0}
+  switchWarningThreshold: 1
+  chessPhaseColour: {r: 0.9, g: 0.85, b: 0.6, a: 1}
+  checkersPhaseColour: {r: 0.6, g: 0.85, b: 0.9, a: 1}
+  whiteTeamColour: {r: 0.95, g: 0.95, b: 0.95, a: 1}
+  blackTeamColour: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  winScreenPanel: {fileID: 0}
+  winnerLabel: {fileID: 0}
+  winReasonLabel: {fileID: 0}
+  replayButton: {fileID: 0}
+  quitButton: {fileID: 0}
 --- !u!82 &3070116817928069987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -197,3 +213,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7068341742167990235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849815778147489290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f3d3a3c76e3ed4bafd1fe97b75c151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardSetup
+  board: {fileID: 5139410389231253186, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
+  piecesRoot: {fileID: 0}
+  whitePawnPrefab: {fileID: 6390886375690306057, guid: 6e509fcf2e50b214195c6e6c706f77b0, type: 3}
+  whiteRookPrefab: {fileID: 6390886375690306057, guid: 248fca4c68a2bb14d9ffaf4eccf8a4b4, type: 3}
+  whiteKnightPrefab: {fileID: 6390886375690306057, guid: 03ef20862ff026a48a7b4e90e5bbd5a8, type: 3}
+  whiteBishopPrefab: {fileID: 6390886375690306057, guid: 85ab70e0d73336140b27ed2694397781, type: 3}
+  whiteQueenPrefab: {fileID: 6390886375690306057, guid: 7289809788c8f9f4b8a6b832024ff175, type: 3}
+  whiteKingPrefab: {fileID: 6390886375690306057, guid: 80ffd2ae7a543fa4981048def7f12b2e, type: 3}
+  blackPawnPrefab: {fileID: 6390886375690306057, guid: 6614b88455682374fbaf9f440c8e21eb, type: 3}
+  blackRookPrefab: {fileID: 6390886375690306057, guid: 0b2d957c493a3fc46bee95db21aa4204, type: 3}
+  blackKnightPrefab: {fileID: 6390886375690306057, guid: 72cef48e006f217459210f0f65059f55, type: 3}
+  blackBishopPrefab: {fileID: 6390886375690306057, guid: a28ad57396f88b6439a1e81130027bc0, type: 3}
+  blackQueenPrefab: {fileID: 6390886375690306057, guid: 11788eb56fe3d594883eacf3937c22e1, type: 3}
+  blackKingPrefab: {fileID: 6390886375690306057, guid: 1f59d78a81d17b54c838c951e4ac4b0d, type: 3}

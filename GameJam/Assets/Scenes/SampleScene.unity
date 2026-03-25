@@ -392,48 +392,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1551397452 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5849815778147489290, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
-  m_PrefabInstance: {fileID: 4259430702117332045}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1551397456 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2789186462702561301, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
   m_PrefabInstance: {fileID: 4259430702117332045}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551397452}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c3aa38cb79d9fa40b964236fd3d0c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
---- !u!114 &1551397458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551397452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f3d3a3c76e3ed4bafd1fe97b75c151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoardSetup
-  board: {fileID: 865773259}
-  piecesRoot: {fileID: 898382459}
-  whitePawnPrefab: {fileID: 6390886375690306057, guid: 6e509fcf2e50b214195c6e6c706f77b0, type: 3}
-  whiteRookPrefab: {fileID: 6390886375690306057, guid: 248fca4c68a2bb14d9ffaf4eccf8a4b4, type: 3}
-  whiteKnightPrefab: {fileID: 6390886375690306057, guid: 03ef20862ff026a48a7b4e90e5bbd5a8, type: 3}
-  whiteBishopPrefab: {fileID: 6390886375690306057, guid: 85ab70e0d73336140b27ed2694397781, type: 3}
-  whiteQueenPrefab: {fileID: 6390886375690306057, guid: 7289809788c8f9f4b8a6b832024ff175, type: 3}
-  whiteKingPrefab: {fileID: 6390886375690306057, guid: 80ffd2ae7a543fa4981048def7f12b2e, type: 3}
-  blackPawnPrefab: {fileID: 6390886375690306057, guid: 6614b88455682374fbaf9f440c8e21eb, type: 3}
-  blackRookPrefab: {fileID: 6390886375690306057, guid: 0b2d957c493a3fc46bee95db21aa4204, type: 3}
-  blackKnightPrefab: {fileID: 6390886375690306057, guid: 72cef48e006f217459210f0f65059f55, type: 3}
-  blackBishopPrefab: {fileID: 6390886375690306057, guid: a28ad57396f88b6439a1e81130027bc0, type: 3}
-  blackQueenPrefab: {fileID: 6390886375690306057, guid: 11788eb56fe3d594883eacf3937c22e1, type: 3}
-  blackKingPrefab: {fileID: 6390886375690306057, guid: 1f59d78a81d17b54c838c951e4ac4b0d, type: 3}
 --- !u!1001 &835053623188997416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,10 +473,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1041164099409541154, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
-      propertyPath: boardRenderer
-      value: 
-      objectReference: {fileID: 865773257}
-    - target: {fileID: 1041164099409541154, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
       propertyPath: boardVisualRoot
       value: 
       objectReference: {fileID: 865773258}
@@ -527,18 +492,6 @@ PrefabInstance:
       propertyPath: board
       value: 
       objectReference: {fileID: 865773259}
-    - target: {fileID: 2789186462702561301, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
-      propertyPath: OnTurnChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2789186462702561301, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
-      propertyPath: OnTurnChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1551397452}
-    - target: {fileID: 2789186462702561301, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
-      propertyPath: OnTurnChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4501957103069223788, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -583,13 +536,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7068341742167990235, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: board
+      value: 
+      objectReference: {fileID: 865773259}
+    - target: {fileID: 7068341742167990235, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: piecesRoot
+      value: 
+      objectReference: {fileID: 898382459}
+    - target: {fileID: 7311985958907924103, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1551397456}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5849815778147489290, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1551397458}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
