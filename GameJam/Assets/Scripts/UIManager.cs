@@ -34,13 +34,13 @@ public class UIManager : MonoBehaviour
     }
     public void RefreshAll(PlayerTeam currentTurn, GamePhase currentPhase, int movesUntilSwitch)
     {
-        UpdateTurn(currentTurn, movesUntilSwitch);
+        UpdateTurn(currentTurn);
         UpdatePhase(currentPhase);
 
         if (winScreenPanel != null)
             winScreenPanel.SetActive(false);
     }
-    public void UpdateTurn(PlayerTeam currentTurn, int movesUntilSwitch)
+    public void UpdateTurn(PlayerTeam currentTurn)
     {
         if (turnLabel != null)
         {
@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
                 : blackTeamColour;
         }
 
-        UpdateSwitchCountdown(movesUntilSwitch);
+        UpdateSwitchCountdown(gameManager.MovesUntilSwitch);
     }
     public void UpdatePhase(GamePhase currentPhase)
     {
