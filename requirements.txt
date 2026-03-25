@@ -1,0 +1,91 @@
+# requirements.txt
+# GameJam: The Switch
+# Dependencies, Libraries & Plugins
+
+# =============================================================================
+# UNITY ENGINE
+# =============================================================================
+# Unity: 2022.3 LTS (Long Term Support)
+#   Recommended minimum: 2022.3.0f1
+#   Render Pipeline: Built-in (2D)
+#   Modules required:
+#     - Windows Build Support (for PC build)
+#     - WebGL Build Support (optional, for browser build)
+
+# =============================================================================
+# UNITY PACKAGES (via Package Manager)
+# =============================================================================
+
+# Core / Built-in (no install needed)
+# com.unity.2d.sprite       — 2D Sprite editor and tools
+# com.unity.2d.tilemap      — 8x8 board grid implementation
+# com.unity.textmeshpro     — UI text (phase labels, turn indicators)
+# com.unity.ugui            — Canvas-based UI system
+
+# Install via Package Manager > Unity Registry:
+com.unity.inputsystem==1.6.3
+# Unified input for mouse/keyboard (piece selection, deselect)
+
+# =============================================================================
+# ART ASSETS (External, Not AI-Generated)
+# =============================================================================
+
+# Chess piece sprites
+# Source: OpenGameArt.org
+# URL: https://game-icons.net/
+# Licence: CC-BY 3.0 / Public Domain (verify per asset)
+# Format: PNG sprites
+
+# Board & UI elements
+# Source: Kenney.nl — Board Game Pack
+# URL: https://kenney.nl/assets/board-game-pack
+# Licence: CC0 (Public Domain)
+
+# UI Font
+# Licence: Open Font Licence (OFL)
+
+# =============================================================================
+# AUDIO ASSETS (External, Free)
+# =============================================================================
+
+# SFX
+# Source: 
+# Required:
+#   - Piece move 
+#   - Piece capture
+#   - Board switch / flip 
+#   - Win jingle
+#   - Lose sting
+
+# Music 
+# Source: OpenGameArt.org or FreeMusicArchive.org
+# Licence: CC0 or CC-BY
+
+# =============================================================================
+# DEVELOPMENT TOOLS
+# =============================================================================
+
+# Version control
+# Git: https://git-scm.com
+# GitHub: https://github.com
+
+# IDE
+# Visual Studio 2022 Community (recommended for Unity C#)
+# OR JetBrains Rider
+
+# AI Tools (per jam brief)
+# Claude by Anthropic: https://claude.ai
+#   Used for: documentation, code scaffolding, logic design, review
+# GitHub Copilot (optional): https://github.com/features/copilot
+#   Used for: in-editor C# autocomplete
+
+# Screen recording (Day 2 video demo)
+# OBS Studio: https://obsproject.com (free, open source)
+# OR Windows Game Bar (Win + G)
+
+# =============================================================================
+# NOTES
+# =============================================================================
+# - No paid assets or plugins required
+# - Verify licence compliance for all external assets before submission
+# - AI-generated art is NOT used (intentional, for visual style consistency)
