@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: aaff0e9cbfe535c41ae1bd896b7e7c2e
+guid: 7a57b63a155d8db47970df7ebff1c211
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -924256871628562790
-    second: Chess-queen2_0
+      213: -633150020928471094
+    second: RookBlackChess_0
+  - first:
+      213: -7343975963345801767
+    second: RookBlackChess_1
+  - first:
+      213: 6507532547148788879
+    second: RookBlackChess_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chess-queen2_0
+      name: RookBlackChess_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 117
+        y: 326
+        width: 278
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9e9d5da5416c23f0800000000000000
-      internalID: -924256871628562790
+      spriteID: acff60919699637f0800000000000000
+      internalID: -633150020928471094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RookBlackChess_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 143
+        width: 222
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd24c975c4f41a90800000000000000
+      internalID: -7343975963345801767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RookBlackChess_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 74
+        width: 282
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84b81d8f566f4a50800000000000000
+      internalID: 6507532547148788879
       vertices: []
       indices: 
       edges: []
@@ -151,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chess-queen2_0: -924256871628562790
+      RookBlackChess_0: -633150020928471094
+      RookBlackChess_1: -7343975963345801767
+      RookBlackChess_2: 6507532547148788879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

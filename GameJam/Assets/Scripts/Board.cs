@@ -273,9 +273,11 @@ public class Board : MonoBehaviour
 
     public Vector3 GridToWorld(int col, int row)
     {
-        return boardOrigin + new Vector3(col * squareSize, 0f, row * squareSize);
+        float offset = (Board.SIZE - 1) * squareSize * 0.5f;
+        return boardOrigin
+            + new Vector3(col * squareSize - offset, row * squareSize - offset, 0f);
     }
-    /// <summary>Converts a world position to the nearest grid coordinate.</summary>
+
     public Vector2Int WorldToGrid(Vector3 worldPos)
     {
         Vector3 local = worldPos - boardOrigin;
