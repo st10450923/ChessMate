@@ -25,34 +25,34 @@
 **Goal:** All docs done, Unity project set up, scene scaffolded.
 
 ### Milestones
-- [ ] Game concept locked and documented
-- [ ] All required documents created
-- [ ] Unity project initialised and pushed to GitHub
-- [ ] Basic scene with board grid laid out
-- [ ] Piece data structures designed (chess identity + checkers state)
+- [X] Game concept locked and documented
+- [X] All required documents created
+- [X] Unity project initialised and pushed to GitHub
+- [X] Basic scene with board grid laid out
+- [X] Piece data structures designed (chess identity + checkers state)
 
 ### Task List
 
 #### Documentation (AI-assisted)
-- [x] `high-concept-document.md` — written with Claude
-- [x] `plan.md` — written with Claude
-- [x] `README.md` — written with Claude
-- [x] `requirements.txt` — written with Claude
-- [x] `refinements-changes.md` — initiated with Claude
+- [X] `high-concept-document.md` — written with Claude
+- [X] `plan.md` — written with Claude
+- [X] `README.md` — written with Claude
+- [X] `requirements.txt` — written with Claude
+- [X] `refinements-changes.md` — initiated with Claude
 
 #### Unity Setup
-- [ ] Create Unity 2D project
-- [ ] Set up GitHub repo, add `.gitignore` (Unity template)
-- [ ] Create folder structure: `/Assets/Scripts`, `/Assets/Sprites`, `/Assets/Scenes`, `/Assets/Audio`
-- [ ] Create `GameBoard` scene
-- [ ] Lay out 8×8 grid using Unity Tilemap or manual quad mesh
-- [ ] Import placeholder piece sprites
+- [X] Create Unity 2D project
+- [X] Set up GitHub repo, add `.gitignore` (Unity template)
+- [X] Create folder structure: `/Assets/Scripts`, `/Assets/Sprites`, `/Assets/Scenes`, `/Assets/Audio`
+- [X] Create `GameBoard` scene
+- [X] Lay out 8×8 grid using Unity Tilemap or manual quad mesh
+- [X] Import placeholder piece sprites
 
 #### Code Architecture (Day 1 scaffolding)
-- [ ] `Piece.cs` — base class: position, chess identity, checkers state, team
-- [ ] `Board.cs` — grid representation, piece placement, valid move queries
-- [ ] `GameManager.cs` — turn counter, phase tracking, switch trigger
-- [ ] `SwitchController.cs` — handles the phase transition and board flip animation hook
+- [X] `Piece.cs` — base class: position, chess identity, checkers state, team
+- [X] `Board.cs` — grid representation, piece placement, valid move queries
+- [X] `GameManager.cs` — turn counter, phase tracking, switch trigger
+- [X] `SwitchController.cs` — handles the phase transition and board flip animation hook
 
 ---
 
@@ -72,24 +72,23 @@
 ### Task List
 
 #### Chess Logic
-- [ ] Implement move generation per piece type (Pawn, Rook, Knight, Bishop, Queen, King)
+- [X] Implement move generation per piece type (Pawn, Rook, Knight, Bishop, Queen, King)
 - [ ] Handle special moves: castling *(stretch)*, en passant *(stretch)*
-- [ ] King capture = win condition (simplified, no check/checkmate required for jam)
+- [X] King capture = win condition (simplified, no check/checkmate required for jam)
 - [ ] Highlight valid moves on click
 
 #### Checkers Logic
-- [ ] Diagonal movement only (forward for regular pieces)
-- [ ] Mandatory jump capture — detect and enforce
-- [ ] Multi-jump chains
-- [ ] Kinging — if a checkers piece reaches back rank, it becomes a king for the duration of the checkers phase (reverts on switch)
-- [ ] No valid moves = loss condition
+- [X] Diagonal movement only (forward for regular pieces)
+- [X] Mandatory jump capture — detect and enforce
+- [X] Multi-jump chains
+- [X] Kinging — if a checkers piece reaches back rank, it becomes a king for the duration of the checkers phase (reverts on switch)
+- [X] No valid moves = loss condition
 
 #### Switch System
-- [ ] Turn counter increments per player move
-- [ ] At turn 2 and every 2 turns thereafter: trigger switch
-- [ ] Board flip animation (rotate 180° on Y axis or CSS-style card flip)
-- [ ] Piece sprites swap between chess set and checkers disc
-- [ ] Chess identity stored before switch, restored after
+- [X] Turn counter increments per player move
+- [X] At turn 2 and every 2 turns thereafter: trigger switch
+- [X] Board flip animation (rotate 180° on Y axis or CSS-style card flip)
+- [X] Piece sprites swap between chess set and checkers disc
 
 #### UI
 - [ ] Phase label: "CHESS PHASE" / "CHECKERS PHASE"
@@ -146,7 +145,7 @@
 #### Submission
 - [ ] Export Unity build (Windows + WebGL if time permits)
 - [ ] Final GitHub commit and tag: `v1.0-jam-submission`
-- [ ] Upload to jam platform with screenshots and video
+- [ ] Upload to ARC with screenshots and video
 
 ---
 
@@ -170,4 +169,4 @@
 
 ---
 
-*Plan generated with AI assistance (Claude, Anthropic). Developer maintains and updates this document throughout the jam.*
+*Plan generated with AI assistance (Claude, Anthropic). Ember Jones maintains and updates this document throughout the jam.*
