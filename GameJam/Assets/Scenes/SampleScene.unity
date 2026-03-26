@@ -209,6 +209,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &312344128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6846745114016672716, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
+  m_PrefabInstance: {fileID: 8270455792745836031}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,12 +583,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7084109338730556206, guid: 4ada026e856155e4ebc4520e98822df8, type: 3}
     - target: {fileID: 5139410389231253186, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 1551397459}
+    - target: {fileID: 5139410389231253186, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1551397456}
     - target: {fileID: 5449609185218478708, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
       propertyPath: m_Name
       value: Board
+      objectReference: {fileID: 0}
+    - target: {fileID: 8430908626373924368, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8430908626373924368, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: 9162871326987102244, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -821,6 +844,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1551397456}
     - target: {fileID: 7311985958907924103, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: moveLogText
+      value: 
+      objectReference: {fileID: 312344128}
+    - target: {fileID: 7311985958907924103, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
       propertyPath: winnerLabel
       value: 
       objectReference: {fileID: 8270455792745836035}
@@ -907,6 +934,10 @@ PrefabInstance:
     - target: {fileID: 959071880725056502, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179623732759174684, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
+      propertyPath: m_fontSize
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3747414077734296961, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1075,6 +1106,10 @@ PrefabInstance:
     - target: {fileID: 7753957037903761984, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
       propertyPath: m_Name
       value: GameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881183699435411683, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: 7940715549620789896, guid: c8b2fc7c20efec94eba991cff4af0801, type: 3}
       propertyPath: m_fontSize

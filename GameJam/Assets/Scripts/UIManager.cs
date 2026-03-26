@@ -1,6 +1,7 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
@@ -18,6 +19,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text winReasonLabel;
     [SerializeField] private Button replayButton;
     [SerializeField] private Button quitButton;
+    [SerializeField] private TMP_Text moveLogText;
+    [SerializeField] private int maxLogEntries = 8;
+
+    private List<string> moveLogEntries = new List<string>();
+    private int fullMoveNumber = 1;
     private void Awake()
     {
         if (winScreenPanel != null)
@@ -29,14 +35,39 @@ public class UIManager : MonoBehaviour
         if (quitButton != null)
             quitButton.onClick.AddListener(OnQuitClicked);
     }
+    public void AddMoveLogEntry(string notation, PlayerTeam team)
+    {
+        if (team == PlayerTeam.White)
+        {
+            moveLogEntries.Add($"{fullMoveNumber}. {notation}");
+        }
+        else
+        {
+            moveLogEntries.Add($"{fullMoveNumber}. ...{notation}");
+            fullMoveNumber++;
+        }
 
+        // Keep n entries so the log doesn't overflow
+        if (moveLogEntries.Count > maxLogEntries)
+            moveLogEntries.RemoveAt(0);
+
+        RefreshMoveLog();
+    }
+
+    private void RefreshMoveLog()
+    {
+        if (moveLogText == null) return;
+        moveLogText.text = string.Join("\n", moveLogEntries);
+    }
     public void RefreshAll(PlayerTeam currentTurn, GamePhase currentPhase, int movesUntilSwitch)
     {
         UpdateTurn(currentTurn);
         UpdatePhase(currentPhase);
+        RefreshMoveLog();
 
         if (winScreenPanel != null)
             winScreenPanel.SetActive(false);
+
     }
     public void UpdateTurn(PlayerTeam currentTurn)
     {

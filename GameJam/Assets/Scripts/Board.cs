@@ -8,6 +8,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private MoveResolver moveResolver;
     [SerializeField] private MoveHighlighter highlighter;
+    [SerializeField] private UIManager uiManager;
 
     [SerializeField] private float squareSize = 1f;
     [SerializeField] private Vector3 boardOrigin = Vector3.zero;
@@ -61,7 +62,28 @@ public class Board : MonoBehaviour
 
     public bool IsEnemy(Vector2Int pos, PlayerTeam myTeam) =>
         IsEnemy(pos.x, pos.y, myTeam);
+    private void LogMove(Piece piece, Vector2Int from, Vector2Int to, bool wasCapture)
+    {
+        // Column letters a-h, row numbers 1-8
+        string fromSquare = $"{(char)('a' + from.x)}{from.y + 1}";
+        string toSquare = $"{(char)('a' + to.x)}{to.y + 1}";
+        string capture = wasCapture ? "x" : "-";
+        string pieceName = PieceInitial(piece.ChessIdentity);
 
+        string entry = $"{pieceName}{fromSquare}{capture}{toSquare}";
+        uiManager?.AddMoveLogEntry(entry, piece.Team);
+    }
+
+    private string PieceInitial(ChessIdentity type) => type switch
+    {
+        ChessIdentity.King => "K",
+        ChessIdentity.Queen => "Q",
+        ChessIdentity.Rook => "R",
+        ChessIdentity.Bishop => "B",
+        ChessIdentity.Knight => "N",
+        ChessIdentity.Pawn => "", 
+        _ => ""
+    };
     public void PlacePiece(Piece piece, int col, int row)
     {
         if (!InBounds(col, row))
@@ -184,53 +206,56 @@ public class Board : MonoBehaviour
 
     private void ExecuteMove(Piece piece, Vector2Int destination)
     {
-        bool wasCapture = false;
+        Vector2Int origin = piece.GridPosition;
 
         if (gameManager.CurrentPhase == GamePhase.Checkers)
         {
-            wasCapture = TryExecuteCheckersMove(piece, destination);
+            bool wasCapture = TryExecuteCheckersMove(piece, destination);
+            Deselect();
+            LogMove(piece, origin, destination, wasCapture);
+
+            if (wasCapture)
+            {
+                TryMultiJump(piece);
+                return;
+            }
+
+            gameManager.OnMoveComplete();
         }
         else
         {
-            // TryExecuteChessMove returns true if the game is already over
-            // (king captured) so we don't call OnMoveComplete in that case
-            bool gameOver = TryExecuteChessMove(piece, destination);
+            var (gameOver, wasCapture) = TryExecuteChessMove(piece, destination);
             Deselect();
+
             if (!gameOver)
+            {
+                LogMove(piece, origin, destination, wasCapture);
                 gameManager.OnMoveComplete();
-            return;
+            }
         }
-
-        Deselect();
-
-        if (wasCapture)
-        {
-            TryMultiJump(piece);
-            return;
-        }
-
-        gameManager.OnMoveComplete();
     }
 
     // Chess move
-    private bool TryExecuteChessMove(Piece piece, Vector2Int destination)
+    private (bool gameOver, bool wasCapture) TryExecuteChessMove(Piece piece, Vector2Int destination)
     {
         int originCol = piece.Col;
         int originRow = piece.Row;
         // Store and clear en passant — only valid for one turn
         Vector2Int? lastEnPassantTarget = enPassantTarget;
         enPassantTarget = null;
+        bool wasCapture = false;
 
         // Standard capture
         Piece target = GetPiece(destination);
         if (target != null)
         {
+            wasCapture = true;
             bool isKing = target.ChessIdentity == ChessIdentity.King;
             RemovePiece(target);
             if (isKing)
             {
                 gameManager.OnKingCaptured(piece.Team);
-                return true;
+                return (true,true);
             }
         }
 
@@ -300,7 +325,7 @@ public class Board : MonoBehaviour
                 piece.PromoteToQueen();
         }
 
-        return false;
+        return (false,wasCapture);
     }
 
     // Checkers move
