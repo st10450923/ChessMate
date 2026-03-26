@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Mate! — High Concept Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --chess-dark: #1a1410;
+    --chess-mid: #2d2318;
+    --chess-warm: #3d2f1a;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5e9c8;
+    --cream: #faf6ee;
+    --checker-red: #8b2020;
+    --checker-red-light: #c44040;
+    --text-primary: #1a1410;
+    --text-secondary: #5c4a2a;
+    --text-muted: #8b7355;
+    --border: rgba(201,168,76,0.25);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.6; }
+    50%       { opacity: 1; }
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Board pattern header ── */
+  .header {
+    background: var(--chess-dark);
+    position: relative;
+    overflow: hidden;
+    padding: 60px 48px 52px;
+    animation: fadeIn 0.6s ease both;
+  }
+
+  .board-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.07;
+    background-image:
+      repeating-conic-gradient(var(--gold) 0% 25%, transparent 0% 50%);
+    background-size: 40px 40px;
+  }
+
+  .header-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .doc-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+
+  .game-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 8vw, 88px);
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--gold-light);
+    letter-spacing: -2px;
+    margin-bottom: 6px;
+  }
+
+  .game-title .exclaim {
+    color: var(--checker-red-light);
+  }
+
+  .game-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(232,201,122,0.55);
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+  }
+
+  .header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    padding-top: 20px;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .meta-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: rgba(201,168,76,0.5);
+    text-transform: uppercase;
+  }
+
+  .meta-value {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(232,201,122,0.85);
+  }
+
+  /* ── Phase pill ── */
+  .phase-pills {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+  }
+
+  .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+  }
+
+  .pill-chess {
+    background: rgba(201,168,76,0.15);
+    color: var(--gold-light);
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .pill-checkers {
+    background: rgba(139,32,32,0.25);
+    color: #e07070;
+    border: 1px solid rgba(139,32,32,0.4);
+  }
+
+  .pill-switch {
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.1);
+    animation: shimmer 2.5s ease-in-out infinite;
+  }
+
+  /* ── Main content ── */
+  .content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 48px 80px;
+  }
+
+  /* ── Elevator pitch ── */
+  .pitch-block {
+    border-left: 3px solid var(--gold);
+    margin: 52px 0 48px;
+    padding: 24px 0 24px 32px;
+    animation: fadeUp 0.5s 0.2s ease both;
+  }
+
+  .pitch-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .pitch-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--text-primary);
+    max-width: 640px;
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 44px;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .section:nth-child(3) { animation-delay: 0.1s; }
+  .section:nth-child(4) { animation-delay: 0.15s; }
+  .section:nth-child(5) { animation-delay: 0.2s; }
+  .section:nth-child(6) { animation-delay: 0.25s; }
+  .section:nth-child(7) { animation-delay: 0.3s; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--chess-dark);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .section-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  .section-divider {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-body {
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    padding-left: 42px;
+  }
+
+  /* ── Two-phase card ── */
+  .phase-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-left: 42px;
+    margin-top: 4px;
+  }
+
+  .phase-card {
+    border-radius: 4px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .phase-card-chess {
+    background: #f7f2e8;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .phase-card-chess::before { background: var(--gold); }
+
+  .phase-card-checkers {
+    background: #f8efef;
+    border: 1px solid rgba(139,32,32,0.15);
+  }
+  .phase-card-checkers::before { background: var(--checker-red); }
+
+  .phase-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .phase-card-chess .phase-card-label { color: #8b7030; }
+  .phase-card-checkers .phase-card-label { color: #8b2020; }
+
+  .phase-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+
+  .phase-card-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .phase-card-win {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .phase-card-win strong {
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  /* ── Loop steps ── */
+  .loop-steps {
+    padding-left: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .loop-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+  }
+
+  .loop-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 28px;
+    width: 1px;
+    height: calc(100% - 4px);
+    background: var(--border);
+  }
+
+  .step-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-dot-chess {
+    background: var(--chess-dark);
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .step-dot-checkers {
+    background: #3d0f0f;
+    color: #e07070;
+    border: 1px solid rgba(139,32,32,0.3);
+  }
+
+  .step-dot-switch {
+    background: #f0ede6;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .step-content {
+    padding: 10px 0 16px;
+  }
+
+  .step-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+  }
+
+  .step-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ── Scope table ── */
+  .scope-table {
+    padding-left: 42px;
+    width: 100%;
+  }
+
+  .scope-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+
+  .scope-row:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .scope-day {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold);
+    padding-top: 1px;
+  }
+
+  .scope-goal {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .scope-detail {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── Visuals note ── */
+  .visuals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-left: 42px;
+  }
+
+  .visual-item {
+    background: #f4f0e8;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+
+  .visual-item-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .visual-item-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    background: var(--chess-dark);
+    padding: 24px 48px;
+    margin-top: 0;
+  }
+
+  .footer-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(201,168,76,0.4);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-credit {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(201,168,76,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 640px) {
+    .header, .content, .footer { padding-left: 24px; padding-right: 24px; }
+    .phase-cards, .visuals-grid { grid-template-columns: 1fr; }
+    .scope-row { grid-template-columns: 50px 1fr; }
+    .scope-detail { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="board-pattern"></div>
+  <div class="header-inner">
+    <div class="doc-type">High Concept Document — Game Jam 2025</div>
+    <h1 class="game-title">Chess Mate<span class="exclaim">!</span></h1>
+    <p class="game-subtitle">A two-phase strategy game for two players</p>
+
+    <div class="header-meta">
+      <div class="meta-item">
+        <span class="meta-label">Genre</span>
+        <span class="meta-value">2-Player Strategy</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Platform</span>
+        <span class="meta-value">PC — Unity Engine</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Jam Theme</span>
+        <span class="meta-value">Switch</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Author</span>
+        <span class="meta-value">Ember Jones</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Document</span>
+        <span class="meta-value">v1.0 — Day 2</span>
+      </div>
+    </div>
+
+    <div class="phase-pills">
+      <span class="pill pill-chess">♟ Chess Phase</span>
+      <span class="pill pill-switch">⇄ Switch</span>
+      <span class="pill pill-checkers">● Checkers Phase</span>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+
+  <div class="pitch-block">
+    <div class="pitch-label">Elevator Pitch</div>
+    <p class="pitch-text">One board, two games. The rules switch between chess and checkers every two turns — pieces keep their location and identity but move and attack differently each phase. Adapt your strategy around the changing board state to outsmart your opponent and master both games at once.</p>
+  </div>
+
+  <!-- Core Concept -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 16 16"><path d="M8 1L10 6H15L11 9.5L12.5 14.5L8 11.5L3.5 14.5L5 9.5L1 6H6L8 1Z"/></svg>
+      </div>
+      <h2 class="section-title">Core Concept</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="section-body" style="margin-bottom:18px;">
+      The game alternates between two phases. Once each player has taken one turn in the current phase, the board switches. Chess pieces retain their positions and identities across every switch, but their movement and capture rules transform entirely with the phase.
+    </div>
+    <div class="phase-cards">
+      <div class="phase-card phase-card-chess">
+        <div class="phase-card-label">Phase One</div>
+        <div class="phase-card-title">Chess</div>
+        <div class="phase-card-body">All standard chess movement applies — each piece moves according to its identity: Pawn, Rook, Knight, Bishop, Queen, or King. En passant and castling are supported.</div>
+        <div class="phase-card-win"><strong>Win by:</strong> Capturing the opponent's King</div>
+      </div>
+      <div class="phase-card phase-card-checkers">
+        <div class="phase-card-label">Phase Two</div>
+        <div class="phase-card-title">Checkers</div>
+        <div class="phase-card-body">All pieces move diagonally as checkers discs. Mandatory captures apply. Multi-jump chains are allowed. A piece reaching the back rank becomes a Checkers King for that phase.</div>
+        <div class="phase-card-win"><strong>Win by:</strong> Capturing all opponent pieces, capturing the King, or leaving opponent with no valid moves</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gameplay Loop -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 16 16"><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 2v4l3 2-1 1.5L7 9.5V4h1z"/></svg>
+      </div>
+      <h2 class="section-title">Gameplay Loop</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="loop-steps">
+      <div class="loop-step">
+        <div class="step-dot step-dot-chess">W</div>
+        <div class="step-content">
+          <div class="step-label">Chess Phase — Turn 1</div>
+          <div class="step-text">Player 1 (White) moves a piece according to chess rules</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-dot step-dot-chess">B</div>
+        <div class="step-content">
+          <div class="step-label">Chess Phase — Turn 2</div>
+          <div class="step-text">Player 2 (Black) moves a piece according to chess rules</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-dot step-dot-switch">⇄</div>
+        <div class="step-content">
+          <div class="step-label">Switch</div>
+          <div class="step-text">The board flips — all pieces become checkers discs. Positions are preserved.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-dot step-dot-checkers">W</div>
+        <div class="step-content">
+          <div class="step-label">Checkers Phase — Turn 1</div>
+          <div class="step-text">Player 1 moves a piece according to checkers rules. Captures are mandatory.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-dot step-dot-checkers">B</div>
+        <div class="step-content">
+          <div class="step-label">Checkers Phase — Turn 2</div>
+          <div class="step-text">Player 2 moves. Multi-jump chains may extend the turn.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-dot step-dot-switch">⇄</div>
+        <div class="step-content">
+          <div class="step-label">Switch</div>
+          <div class="step-text">Board flips back. Pieces revert to their chess identities. The cycle repeats until a win condition is met.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visuals -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 16 16"><path d="M2 4h12v8H2zm1 1v6h10V5zm2 1h2v2H5zm4 0h2v2H9zM5 10h6v1H5z"/></svg>
+      </div>
+      <h2 class="section-title">Visual Style</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="visuals-grid">
+      <div class="visual-item">
+        <div class="visual-item-label">Chess Phase</div>
+        <div class="visual-item-text">Detailed piece sprites showing each type clearly — Rook, Knight, Bishop, and so on. Classic board palette. Icons sourced from game-icons.net.</div>
+      </div>
+      <div class="visual-item">
+        <div class="visual-item-label">Checkers Phase</div>
+        <div class="visual-item-text">Minimalist disc sprites with a small chess icon inset to preserve identity. Bolder, flatter colour palette signals the rule change visually.</div>
+      </div>
+      <div class="visual-item">
+        <div class="visual-item-label">The Switch Animation</div>
+        <div class="visual-item-text">Board squeezes flat on the X axis, sprites swap at the midpoint, board expands. Pieces briefly hide during the flip and reappear in new form.</div>
+      </div>
+      <div class="visual-item">
+        <div class="visual-item-label">Asset Sources</div>
+        <div class="visual-item-text">game-icons.net and kenney.nl — free, open-licence assets. No AI-generated art used, ensuring a consistent visual style throughout.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scope -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 16 16"><path d="M3 2h10v2H3zm0 4h10v2H3zm0 4h6v2H3z"/></svg>
+      </div>
+      <h2 class="section-title">3-Day Scope</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="scope-table">
+      <div class="scope-row">
+        <div class="scope-day">Day 1</div>
+        <div class="scope-goal">Documentation & Setup</div>
+        <div class="scope-detail">All design documents, Unity project scaffolding, code architecture, piece data structures</div>
+      </div>
+      <div class="scope-row">
+        <div class="scope-day">Day 2</div>
+        <div class="scope-goal">Playable Prototype</div>
+        <div class="scope-detail">Both rulesets functional, phase switching, win conditions, en passant, castling, move log, full UI</div>
+      </div>
+      <div class="scope-row">
+        <div class="scope-day">Day 3</div>
+        <div class="scope-goal">Polish & Submission</div>
+        <div class="scope-detail">Audio, visual polish, bug fixes, video demo, build export, final documentation</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-note">Chess Mate! — High Concept Document — Game Jam 2025</span>
+    <span class="footer-credit">Documentation assisted by Claude (Anthropic) — reviewed and approved by Ember Jones</span>
+  </div>
+</footer>
+
+</body>
+</html>
