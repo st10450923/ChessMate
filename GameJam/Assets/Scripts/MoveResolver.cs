@@ -72,14 +72,12 @@ public class MoveResolver : MonoBehaviour
             return new int[] { 1, -1 };
 
         return piece.Team == PlayerTeam.White
-            ? new int[] { 1 }   // White moves up the board (increasing row)
-            : new int[] { -1 }; // Black moves down the board (decreasing row)
+            ? new int[] { 1 }   // White moves up
+            : new int[] { -1 }; // Black moves down
     }
     private List<Vector2Int> GetChessMoves(Piece piece, Board board)
     {
         // Route to the correct movement pattern for this piece type.
-        // Promoted queens use Queen logic automatically since ChessIdentity
-        // is updated to Queen on promotion.
         return piece.ChessIdentity switch
         {
             ChessIdentity.Pawn => GetPawnMoves(piece, board),
@@ -95,48 +93,50 @@ public class MoveResolver : MonoBehaviour
     {
         List<Vector2Int> moves = new List<Vector2Int>();
 
-        // White moves up (+row), Black moves down (-row)
         int forward = piece.Team == PlayerTeam.White ? 1 : -1;
         int startRow = piece.Team == PlayerTeam.White ? 1 : 6;
 
         int col = piece.Col;
         int row = piece.Row;
 
-        // --- Single step forward ---
+        // Single step forward
         if (board.InBounds(col, row + forward) &&
             board.IsEmpty(col, row + forward))
         {
             moves.Add(new Vector2Int(col, row + forward));
 
-            // --- Double step from starting row ---
-            if (row == startRow &&
-                board.IsEmpty(col, row + forward * 2))
-            {
+            // Double step from starting row
+            if (row == startRow && board.IsEmpty(col, row + forward * 2))
                 moves.Add(new Vector2Int(col, row + forward * 2));
-            }
         }
 
-        // --- Diagonal captures ---
+        // Diagonal captures
         foreach (int dc in new int[] { -1, 1 })
         {
             int captureCol = col + dc;
             int captureRow = row + forward;
 
-            if (board.InBounds(captureCol, captureRow) &&
-                board.IsEnemy(captureCol, captureRow, piece.Team))
+            if (!board.InBounds(captureCol, captureRow)) continue;
+
+            // Standard
+            if (board.IsEnemy(captureCol, captureRow, piece.Team))
+                moves.Add(new Vector2Int(captureCol, captureRow));
+
+            // En passant
+            if (board.EnPassantTarget.HasValue &&
+                board.EnPassantTarget.Value == new Vector2Int(captureCol, captureRow))
             {
                 moves.Add(new Vector2Int(captureCol, captureRow));
             }
         }
 
-        // Note: En passant is out of scope 
         return moves;
     }
     private List<Vector2Int> GetKnightMoves(Piece piece, Board board)
     {
         List<Vector2Int> moves = new List<Vector2Int>();
 
-        // All 8 possible L-shaped offsets
+        // All possible L-shaped offsets
         int[,] offsets =
         {
             { -2, -1 }, { -2,  1 },
@@ -152,7 +152,6 @@ public class MoveResolver : MonoBehaviour
 
             if (!board.InBounds(destCol, destRow)) continue;
 
-            // Knights can land on empty squares or enemy squares 
             if (board.IsEmpty(destCol, destRow) ||
                 board.IsEnemy(destCol, destRow, piece.Team))
             {
@@ -167,6 +166,7 @@ public class MoveResolver : MonoBehaviour
     {
         List<Vector2Int> moves = new List<Vector2Int>();
 
+        // Standard moves
         for (int dc = -1; dc <= 1; dc++)
         {
             for (int dr = -1; dr <= 1; dr++)
@@ -180,13 +180,30 @@ public class MoveResolver : MonoBehaviour
 
                 if (board.IsEmpty(destCol, destRow) ||
                     board.IsEnemy(destCol, destRow, piece.Team))
-                {
                     moves.Add(new Vector2Int(destCol, destRow));
-                }
             }
         }
 
-        // Note: Castling is out of scope
+        // Castling
+        int backRank = piece.Team == PlayerTeam.White ? 0 : 7;
+
+        // Kingside — squares f and g (cols 5, 6) must be empty
+        if (board.CanCastleKingside(piece.Team) &&
+            board.IsEmpty(5, backRank) &&
+            board.IsEmpty(6, backRank))
+        {
+            moves.Add(new Vector2Int(6, backRank));
+        }
+
+        // Queenside — squares b, c, d (cols 1, 2, 3) must be empty
+        if (board.CanCastleQueenside(piece.Team) &&
+            board.IsEmpty(1, backRank) &&
+            board.IsEmpty(2, backRank) &&
+            board.IsEmpty(3, backRank))
+        {
+            moves.Add(new Vector2Int(2, backRank));
+        }
+
         return moves;
     }
     private List<Vector2Int> GetSlidingMoves(
@@ -207,12 +224,12 @@ public class MoveResolver : MonoBehaviour
                 }
                 else if (board.IsEnemy(col, row, piece.Team))
                 {
-                    moves.Add(new Vector2Int(col, row)); // capture
-                    break; // can't slide through a piece
+                    moves.Add(new Vector2Int(col, row)); 
+                    break; 
                 }
                 else
                 {
-                    break; // blocked by friendly piece
+                    break; 
                 }
 
                 col += dir.x;
@@ -238,7 +255,6 @@ public class MoveResolver : MonoBehaviour
 
     private static Vector2Int[] QueenDirections()
     {
-        // Queen = Rook + Bishop
         var dirs = new List<Vector2Int>();
         dirs.AddRange(RookDirections());
         dirs.AddRange(BishopDirections());

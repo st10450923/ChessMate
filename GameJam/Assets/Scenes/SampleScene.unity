@@ -547,6 +547,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 825482449063244817, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a36e632c8301e34e8a1090fdfc1d54f, type: 3}
     - target: {fileID: 4445797783376012885, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
       propertyPath: board
       value: 
@@ -566,7 +570,7 @@ PrefabInstance:
     - target: {fileID: 4445797783376012885, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
       propertyPath: captureHighlightPrefab
       value: 
-      objectReference: {fileID: 7084109338730556206, guid: b69b8780c4fe6d14da90fe80b6a077f6, type: 3}
+      objectReference: {fileID: 7084109338730556206, guid: 4ada026e856155e4ebc4520e98822df8, type: 3}
     - target: {fileID: 5139410389231253186, guid: 313e9c56772d4054fbdae2c46404b9f0, type: 3}
       propertyPath: gameManager
       value: 
@@ -840,6 +844,18 @@ PrefabInstance:
       propertyPath: switchCountdownLabel
       value: 
       objectReference: {fileID: 8270455792745836037}
+    - target: {fileID: 7311985958907924103, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: checkersPhaseColour.b
+      value: 0.6132024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311985958907924103, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: checkersPhaseColour.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311985958907924103, guid: 74bcd097b8ce695479ba660227cb0bff, type: 3}
+      propertyPath: checkersPhaseColour.r
+      value: 0.9019608
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

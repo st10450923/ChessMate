@@ -15,6 +15,28 @@ public class Board : MonoBehaviour
     private Piece[,] grid = new Piece[SIZE, SIZE];
     private Piece selectedPiece;
     private List<Vector2Int> validMoves = new List<Vector2Int>();
+    private Vector2Int? enPassantTarget = null;
+
+    //Castling variables
+    private bool whiteKingMoved = false;
+    private bool blackKingMoved = false;
+    private bool whiteRookAMoved = false; 
+    private bool whiteRookHMoved = false; 
+    private bool blackRookAMoved = false; 
+    private bool blackRookHMoved = false;
+    public bool CanCastleKingside(PlayerTeam team) =>
+    team == PlayerTeam.White
+        ? !whiteKingMoved && !whiteRookHMoved
+        : !blackKingMoved && !blackRookHMoved;
+
+    public bool CanCastleQueenside(PlayerTeam team) =>
+        team == PlayerTeam.White
+            ? !whiteKingMoved && !whiteRookAMoved
+            : !blackKingMoved && !blackRookAMoved;
+
+
+    public Vector2Int? EnPassantTarget => enPassantTarget;
+
     public Piece GetPiece(int col, int row)
     {
         if (!InBounds(col, row)) return null;
@@ -193,6 +215,13 @@ public class Board : MonoBehaviour
     // Chess move
     private bool TryExecuteChessMove(Piece piece, Vector2Int destination)
     {
+        int originCol = piece.Col;
+        int originRow = piece.Row;
+        // Store and clear en passant — only valid for one turn
+        Vector2Int? lastEnPassantTarget = enPassantTarget;
+        enPassantTarget = null;
+
+        // Standard capture
         Piece target = GetPiece(destination);
         if (target != null)
         {
@@ -201,15 +230,72 @@ public class Board : MonoBehaviour
             if (isKing)
             {
                 gameManager.OnKingCaptured(piece.Team);
-                return true; // game over, don't advance turn
+                return true;
             }
         }
 
+        // En passant capture — destination is empty, remove the pawn beside it
+        if (piece.ChessIdentity == ChessIdentity.Pawn &&
+            lastEnPassantTarget.HasValue &&
+            destination == lastEnPassantTarget.Value)
+        {
+            int capturedRow = piece.Team == PlayerTeam.White
+                ? destination.y - 1
+                : destination.y + 1;
+
+            Piece capturedPawn = GetPiece(destination.x, capturedRow);
+            if (capturedPawn != null)
+                RemovePiece(capturedPawn);
+        }
+
         MovePieceOnGrid(piece, destination);
+        // Castling — king moved two squares
+        if (piece.ChessIdentity == ChessIdentity.King)
+        {
+            if (piece.Team == PlayerTeam.White) whiteKingMoved = true;
+            else blackKingMoved = true;
+
+            int colDiff = destination.x - originCol;
+            if (Mathf.Abs(colDiff) == 2)
+            {
+                bool kingside = colDiff > 0;
+                int rookFromCol = kingside ? 7 : 0;
+                int rookToCol = kingside ? 5 : 3;
+                int backRank = piece.Team == PlayerTeam.White ? 0 : 7;
+
+                Piece rook = GetPiece(rookFromCol, backRank);
+                if (rook != null)
+                    MovePieceOnGrid(rook, new Vector2Int(rookToCol, backRank));
+            }
+        }
+
+        // Track rook moves using stored origin column
+        if (piece.ChessIdentity == ChessIdentity.Rook)
+        {
+            if (piece.Team == PlayerTeam.White)
+            {
+                if (originCol == 0) whiteRookAMoved = true;
+                if (originCol == 7) whiteRookHMoved = true;
+            }
+            else
+            {
+                if (originCol == 0) blackRookAMoved = true;
+                if (originCol == 7) blackRookHMoved = true;
+            }
+        }
 
         if (piece.ChessIdentity == ChessIdentity.Pawn)
         {
-            int promotionRow = (piece.Team == PlayerTeam.White) ? SIZE - 1 : 0;
+            // Pawn double step — set en passant target for opponent next turn
+            int startRow = piece.Team == PlayerTeam.White ? 1 : 6;
+            if (Mathf.Abs(destination.y - startRow) == 2)
+            {
+                int epRow = piece.Team == PlayerTeam.White ? 2 : 5;
+                enPassantTarget = new Vector2Int(destination.x, epRow);
+            }
+
+            // Promotion
+            int promotionRow = piece.Team == PlayerTeam.White ? SIZE - 1 : 0;
             if (destination.y == promotionRow)
                 piece.PromoteToQueen();
         }
@@ -225,11 +311,19 @@ public class Board : MonoBehaviour
 
         if (isCapture)
         {
-            // The jumped-over square is the midpoint
             int midCol = (piece.Col + destination.x) / 2;
             int midRow = (piece.Row + destination.y) / 2;
             Piece captured = GetPiece(midCol, midRow);
-            if (captured != null) RemovePiece(captured);
+            if (captured != null)
+            {
+                bool isKing = captured.ChessIdentity == ChessIdentity.King;
+                RemovePiece(captured);
+                if (isKing)
+                {
+                    gameManager.OnKingCaptured(piece.Team);
+                    return false;
+                }
+            }
         }
 
         MovePieceOnGrid(piece, destination);
@@ -309,13 +403,22 @@ public class Board : MonoBehaviour
     public void OnPhaseWillSwitch()
     {
         Deselect();
-        //ResetCheckersKings();
+        ResetCheckersKings();
+        enPassantTarget = null; // en passant does not carry across a phase switch
     }
     public void ClearGrid()
     {
         for (int c = 0; c < SIZE; c++)
             for (int r = 0; r < SIZE; r++)
                 grid[c, r] = null;
+
+        whiteKingMoved = false;
+        blackKingMoved = false;
+        whiteRookAMoved = false;
+        whiteRookHMoved = false;
+        blackRookAMoved = false;
+        blackRookHMoved = false;
+        enPassantTarget = null;
     }
 
     private void ResetCheckersKings()

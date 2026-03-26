@@ -56,8 +56,8 @@ public class UIManager : MonoBehaviour
         if (phaseLabel != null)
         {
             phaseLabel.text = currentPhase == GamePhase.Chess
-                ? "CHESS PHASE"
-                : "CHECKERS PHASE";
+                ? "CHESS"
+                : "CHECKERS";
 
             phaseLabel.color = currentPhase == GamePhase.Chess
                 ? chessPhaseColour
