@@ -61,12 +61,12 @@
 **Goal:** Both rulesets fully functional, switching works, win conditions detected.
 
 ### Milestones
-- [ ] Chess movement and capture logic complete
-- [ ] Checkers movement and capture logic complete (including mandatory captures)
-- [ ] Phase switching works correctly (2-turn trigger, board flip, piece rule swap)
-- [ ] Piece identity persists and restores across phases
-- [ ] Win condition detection working for both phases
-- [ ] Basic UI: turn indicator, phase indicator, switch countdown
+- [X] Chess movement and capture logic complete
+- [X] Checkers movement and capture logic complete (including mandatory captures)
+- [X] Phase switching works correctly (2-turn trigger, board flip, piece rule swap)
+- [X] Piece identity persists and restores across phases
+- [X] Win condition detection working for both phases
+- [X] Basic UI: turn indicator, phase indicator, switch countdown
 - [ ] Video demo recorded showing AI-assisted sections
 
 ### Task List
@@ -91,9 +91,9 @@
 - [X] Piece sprites swap between chess set and checkers disc
 
 #### UI
-- [ ] Phase label: "CHESS PHASE" / "CHECKERS PHASE"
-- [ ] Turn indicator: "Player 1 / Player 2"
-- [ ] Switch counter: "Switch in X turn(s)"
+- [X]Phase label: "CHESS PHASE" / "CHECKERS PHASE"
+- [X] Turn indicator: "Player 1 / Player 2"
+- [X] Switch counter: "Switch in X turn(s)"
 - [ ] Captured pieces tray
 
 #### Documents Update
@@ -112,7 +112,7 @@
 - [ ] Audio: move sounds, switch SFX, win/lose jingle
 - [ ] All documents finalised and accurate
 - [ ] Build exported and tested
-- [ ] Submitted to jam platform
+- [ ] Submitted to arc 
 
 ### Task List
 
