@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Board board;
     [SerializeField] private SwitchController switchController;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private BoardSetup boardSetup;
 
     [SerializeField] private int movesPerPhase = 2;
 
@@ -59,9 +60,9 @@ public class GameManager : MonoBehaviour
     }
     public void OnMoveComplete()
     {
+        Debug.Log($"OnMoveComplete called — phase: {CurrentPhase}, moves this phase: {MovesThisPhase}, current turn: {CurrentTurn}");
         MovesThisPhase++;
 
-        // Check phase-specific win conditions before advancing the turn
         if (CurrentPhase == GamePhase.Checkers)
         {
             PlayerTeam opponent = Opponent(CurrentTurn);
@@ -72,24 +73,21 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
-            // Advance turn temporarily to check if the opponent has moves
-            PlayerTeam nextPlayer = Opponent(CurrentTurn);
-            if (board.HasNoValidMoves(nextPlayer))
+            if (board.HasNoValidMoves(opponent))
             {
                 TriggerWin(CurrentTurn, WinReason.NoValidMoves);
                 return;
             }
-
-            //Check if phases must switch
-            if (MovesThisPhase >= movesPerPhase)
-            {
-                TriggerSwitch();
-                return;
-            }
-
-            // Otherwise just advance the turn
-            AdvanceTurn();
         }
+
+        // Runs for BOTH phases
+        if (MovesThisPhase >= movesPerPhase)
+        {
+            TriggerSwitch();
+            return;
+        }
+
+        AdvanceTurn();
     }
 
     public void OnKingCaptured(PlayerTeam capturingTeam)
@@ -99,12 +97,12 @@ public class GameManager : MonoBehaviour
 
     private void AdvanceTurn()
     {
+        Debug.Log($"AdvanceTurn — changing from {CurrentTurn} to {Opponent(CurrentTurn)}");
         CurrentTurn = Opponent(CurrentTurn);
+        Debug.Log($"AdvanceTurn — CurrentTurn is now {CurrentTurn}");
         OnTurnChanged.Invoke(CurrentTurn);
-        //uiManager?.UpdateTurn(CurrentTurn, MovesUntilSwitch);
-
-        Debug.Log($"Turn: {CurrentTurn} | Phase: {CurrentPhase} | " +
-                  $"Moves this phase: {MovesThisPhase}/{movesPerPhase}");
+        Debug.Log($"AdvanceTurn — after invoke, CurrentTurn is {CurrentTurn}");
+        uiManager?.UpdateTurn(CurrentTurn);
     }
     private void TriggerSwitch()
     {
@@ -126,12 +124,10 @@ public class GameManager : MonoBehaviour
 
         MovesThisPhase = 0;
 
-        // Notify pieces so they can swap sprites
         NotifyPiecesOfPhaseChange();
 
         OnPhaseChanged.Invoke(CurrentPhase);
 
-        // Advance to the next player's turn
         AdvanceTurn();
 
         InputLocked = false;
@@ -141,8 +137,6 @@ public class GameManager : MonoBehaviour
 
     private void NotifyPiecesOfPhaseChange()
     {
-        // Find all pieces in the scene and tell them the phase changed.
-        // This is a simple broadcast — for larger projects consider an event bus.
         Piece[] allPieces = FindObjectsByType<Piece>(FindObjectsSortMode.None);
         foreach (Piece p in allPieces)
             p.OnPhaseChanged(CurrentPhase);
@@ -166,7 +160,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"Game over — {winner} wins! Reason: {reasonText}");
         OnGameOver.Invoke(winner);
-        //uiManager?.ShowWinScreen(winner, reasonText);
+        uiManager?.ShowWinScreen(winner, reasonText);
     }
 
     public void RestartGame()
@@ -180,11 +174,7 @@ public class GameManager : MonoBehaviour
         OnPhaseChanged.Invoke(CurrentPhase);
 
         uiManager?.RefreshAll(CurrentTurn, CurrentPhase, MovesUntilSwitch);
-
-        // BoardSetup should listen to OnGameOver or have its own restart method
-        // to respawn pieces. Hook that up in the Inspector via UnityEvent or
-        // call it directly here if you have a reference.
-        // boardSetup.Restart();
+        boardSetup.Restart();
     }
 
     //Utility

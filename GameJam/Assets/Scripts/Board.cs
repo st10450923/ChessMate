@@ -89,8 +89,13 @@ public class Board : MonoBehaviour
             SelectPiece(clickedPiece);
         }
     }
+    public void OnRightClick()
+    {
+        Deselect();
+    }
     private void SelectPiece(Piece piece)
     {
+        Deselect();
         selectedPiece = piece;
         validMoves = moveResolver.GetValidMoves(piece, this, gameManager.CurrentPhase);
 
@@ -105,8 +110,11 @@ public class Board : MonoBehaviour
 
     private void Deselect()
     {
-        if (selectedPiece != null) selectedPiece.SetSelected(false);
-        selectedPiece = null;
+        if (selectedPiece != null)
+        {
+            selectedPiece.SetSelected(false);
+            selectedPiece = null;
+        }
         validMoves.Clear();
         //highlighter.ClearMoves();
     }
@@ -162,45 +170,51 @@ public class Board : MonoBehaviour
         }
         else
         {
-            TryExecuteChessMove(piece, destination);
+            // TryExecuteChessMove returns true if the game is already over
+            // (king captured) so we don't call OnMoveComplete in that case
+            bool gameOver = TryExecuteChessMove(piece, destination);
+            Deselect();
+            if (!gameOver)
+                gameManager.OnMoveComplete();
+            return;
         }
 
         Deselect();
 
-        if (gameManager.CurrentPhase == GamePhase.Checkers && wasCapture)
+        if (wasCapture)
         {
             TryMultiJump(piece);
-            return; 
+            return;
         }
 
         gameManager.OnMoveComplete();
     }
 
     // Chess move
-    private void TryExecuteChessMove(Piece piece, Vector2Int destination)
+    private bool TryExecuteChessMove(Piece piece, Vector2Int destination)
     {
-        // Capture: remove the piece on the destination square
         Piece target = GetPiece(destination);
         if (target != null)
         {
-            bool winCondition = target.ChessIdentity == ChessIdentity.King;
+            bool isKing = target.ChessIdentity == ChessIdentity.King;
             RemovePiece(target);
-            if (winCondition)
+            if (isKing)
             {
                 gameManager.OnKingCaptured(piece.Team);
-                return;
+                return true; // game over, don't advance turn
             }
         }
 
         MovePieceOnGrid(piece, destination);
 
-        // Pawn promotion to Queen (simplified)
         if (piece.ChessIdentity == ChessIdentity.Pawn)
         {
             int promotionRow = (piece.Team == PlayerTeam.White) ? SIZE - 1 : 0;
             if (destination.y == promotionRow)
                 piece.PromoteToQueen();
         }
+
+        return false;
     }
 
     // Checkers move
@@ -280,18 +294,19 @@ public class Board : MonoBehaviour
 
     public Vector2Int WorldToGrid(Vector3 worldPos)
     {
+        float offset = (Board.SIZE - 1) * squareSize * 0.5f;
         Vector3 local = worldPos - boardOrigin;
-        int col = Mathf.RoundToInt(local.x / squareSize);
-        int row = Mathf.RoundToInt(local.z / squareSize);
+        int col = Mathf.RoundToInt((local.x + offset) / squareSize);
+        int row = Mathf.RoundToInt((local.y + offset) / squareSize);
         return new Vector2Int(col, row);
     }
-    
+
     // Phase switch support
-        /// <summary>
-        /// Called by SwitchController before the phase toggles.
-        /// Clears any active selection so the new phase starts clean.
-        /// Also resets temporary checkers-king status on all pieces.
-        /// </summary>
+    /// <summary>
+    /// Called by SwitchController before the phase toggles.
+    /// Clears any active selection so the new phase starts clean.
+    /// Also resets temporary checkers-king status on all pieces.
+    /// </summary>
     public void OnPhaseWillSwitch()
     {
         Deselect();
@@ -334,14 +349,5 @@ public class Board : MonoBehaviour
                 if (grid[c, r] != null && grid[c, r].Team == team)
                     count++;
         return count;
-    }
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }
