@@ -73,9 +73,9 @@
 
 #### Chess Logic
 - [X] Implement move generation per piece type (Pawn, Rook, Knight, Bishop, Queen, King)
-- [ ] Handle special moves: castling *(stretch)*, en passant *(stretch)*
+- [X] Handle special moves: castling *(stretch)*, en passant *(stretch)*
 - [X] King capture = win condition (simplified, no check/checkmate required for jam)
-- [ ] Highlight valid moves on click
+- [X] Highlight valid moves on click
 
 #### Checkers Logic
 - [X] Diagonal movement only (forward for regular pieces)
@@ -91,8 +91,8 @@
 - [X] Piece sprites swap between chess set and checkers disc
 
 #### UI
-- [X]Phase label: "CHESS PHASE" / "CHECKERS PHASE"
-- [X] Turn indicator: "Player 1 / Player 2"
+- [X]Phase label: "CHESS" / "CHECKERS"
+- [X] Turn indicator: "Black/White"
 - [X] Switch counter: "Switch in X turn(s)"
 - [ ] Captured pieces tray
 
