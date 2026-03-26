@@ -525,7 +525,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -606,12 +606,12 @@ TextureImporter:
       name: sheet_white2x_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1965
-        width: 66
-        height: 66
+        x: 0
+        y: 1948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -628,12 +628,12 @@ TextureImporter:
       name: sheet_white2x_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 1967
-        width: 58
-        height: 58
+        x: 100
+        y: 1948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -650,12 +650,12 @@ TextureImporter:
       name: sheet_white2x_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 2000
-        width: 54
-        height: 31
+        x: 200
+        y: 1948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -672,12 +672,12 @@ TextureImporter:
       name: sheet_white2x_3
       rect:
         serializedVersion: 2
-        x: 317
-        y: 2015
-        width: 18
-        height: 18
+        x: 300
+        y: 1948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -694,12 +694,12 @@ TextureImporter:
       name: sheet_white2x_4
       rect:
         serializedVersion: 2
-        x: 341
-        y: 2015
-        width: 42
-        height: 18
+        x: 400
+        y: 1948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -716,12 +716,12 @@ TextureImporter:
       name: sheet_white2x_5
       rect:
         serializedVersion: 2
-        x: 411
-        y: 1981
-        width: 72
-        height: 52
+        x: 500
+        y: 1948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -738,12 +738,12 @@ TextureImporter:
       name: sheet_white2x_6
       rect:
         serializedVersion: 2
-        x: 511
-        y: 1971
-        width: 79
-        height: 50
+        x: 0
+        y: 1848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -760,12 +760,12 @@ TextureImporter:
       name: sheet_white2x_7
       rect:
         serializedVersion: 2
-        x: 223
-        y: 1968
-        width: 54
-        height: 31
+        x: 100
+        y: 1848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -782,12 +782,12 @@ TextureImporter:
       name: sheet_white2x_8
       rect:
         serializedVersion: 2
-        x: 317
-        y: 1991
-        width: 18
-        height: 18
+        x: 200
+        y: 1848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -804,12 +804,12 @@ TextureImporter:
       name: sheet_white2x_9
       rect:
         serializedVersion: 2
-        x: 341
-        y: 1991
-        width: 42
-        height: 18
+        x: 300
+        y: 1848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -826,12 +826,12 @@ TextureImporter:
       name: sheet_white2x_10
       rect:
         serializedVersion: 2
-        x: 469
-        y: 1957
-        width: 22
-        height: 34
+        x: 400
+        y: 1848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -848,12 +848,12 @@ TextureImporter:
       name: sheet_white2x_11
       rect:
         serializedVersion: 2
-        x: 317
-        y: 1967
-        width: 18
-        height: 18
+        x: 500
+        y: 1848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -870,12 +870,12 @@ TextureImporter:
       name: sheet_white2x_12
       rect:
         serializedVersion: 2
-        x: 341
-        y: 1967
-        width: 42
-        height: 18
+        x: 0
+        y: 1748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -892,12 +892,12 @@ TextureImporter:
       name: sheet_white2x_13
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1865
-        width: 66
-        height: 66
+        x: 100
+        y: 1748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -914,12 +914,12 @@ TextureImporter:
       name: sheet_white2x_14
       rect:
         serializedVersion: 2
-        x: 123
-        y: 1867
-        width: 58
-        height: 58
+        x: 200
+        y: 1748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -936,12 +936,12 @@ TextureImporter:
       name: sheet_white2x_15
       rect:
         serializedVersion: 2
-        x: 219
-        y: 1872
-        width: 30
-        height: 55
+        x: 300
+        y: 1748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -958,12 +958,12 @@ TextureImporter:
       name: sheet_white2x_16
       rect:
         serializedVersion: 2
-        x: 251
-        y: 1872
-        width: 30
-        height: 55
+        x: 400
+        y: 1748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -980,12 +980,12 @@ TextureImporter:
       name: sheet_white2x_17
       rect:
         serializedVersion: 2
-        x: 317
-        y: 1915
-        width: 18
-        height: 18
+        x: 500
+        y: 1748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1002,12 +1002,12 @@ TextureImporter:
       name: sheet_white2x_18
       rect:
         serializedVersion: 2
-        x: 341
-        y: 1915
-        width: 18
-        height: 18
+        x: 0
+        y: 1648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1024,12 +1024,12 @@ TextureImporter:
       name: sheet_white2x_19
       rect:
         serializedVersion: 2
-        x: 365
-        y: 1915
-        width: 18
-        height: 18
+        x: 100
+        y: 1648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1046,12 +1046,12 @@ TextureImporter:
       name: sheet_white2x_20
       rect:
         serializedVersion: 2
-        x: 411
-        y: 1881
-        width: 72
-        height: 52
+        x: 200
+        y: 1648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1068,12 +1068,12 @@ TextureImporter:
       name: sheet_white2x_21
       rect:
         serializedVersion: 2
-        x: 511
-        y: 1871
-        width: 79
-        height: 50
+        x: 300
+        y: 1648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1090,12 +1090,12 @@ TextureImporter:
       name: sheet_white2x_22
       rect:
         serializedVersion: 2
-        x: 317
-        y: 1891
-        width: 18
-        height: 18
+        x: 400
+        y: 1648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1112,12 +1112,12 @@ TextureImporter:
       name: sheet_white2x_23
       rect:
         serializedVersion: 2
-        x: 341
-        y: 1891
-        width: 18
-        height: 18
+        x: 500
+        y: 1648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1134,12 +1134,12 @@ TextureImporter:
       name: sheet_white2x_24
       rect:
         serializedVersion: 2
-        x: 365
-        y: 1891
-        width: 18
-        height: 18
+        x: 0
+        y: 1548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1156,12 +1156,12 @@ TextureImporter:
       name: sheet_white2x_25
       rect:
         serializedVersion: 2
-        x: 477
-        y: 1857
-        width: 16
-        height: 34
+        x: 100
+        y: 1548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1178,12 +1178,12 @@ TextureImporter:
       name: sheet_white2x_26
       rect:
         serializedVersion: 2
-        x: 317
-        y: 1867
-        width: 18
-        height: 18
+        x: 200
+        y: 1548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1200,12 +1200,12 @@ TextureImporter:
       name: sheet_white2x_27
       rect:
         serializedVersion: 2
-        x: 341
-        y: 1867
-        width: 18
-        height: 18
+        x: 300
+        y: 1548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1222,12 +1222,12 @@ TextureImporter:
       name: sheet_white2x_28
       rect:
         serializedVersion: 2
-        x: 365
-        y: 1867
-        width: 18
-        height: 18
+        x: 400
+        y: 1548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1244,12 +1244,12 @@ TextureImporter:
       name: sheet_white2x_29
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1765
-        width: 66
-        height: 66
+        x: 500
+        y: 1548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1266,12 +1266,12 @@ TextureImporter:
       name: sheet_white2x_30
       rect:
         serializedVersion: 2
-        x: 117
-        y: 1777
-        width: 66
-        height: 42
+        x: 0
+        y: 1448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1288,12 +1288,12 @@ TextureImporter:
       name: sheet_white2x_31
       rect:
         serializedVersion: 2
-        x: 217
-        y: 1763
-        width: 66
-        height: 66
+        x: 100
+        y: 1448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1310,12 +1310,12 @@ TextureImporter:
       name: sheet_white2x_32
       rect:
         serializedVersion: 2
-        x: 320
-        y: 1760
-        width: 63
-        height: 69
+        x: 200
+        y: 1448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1332,12 +1332,12 @@ TextureImporter:
       name: sheet_white2x_33
       rect:
         serializedVersion: 2
-        x: 409
-        y: 1771
-        width: 82
-        height: 56
+        x: 300
+        y: 1448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1354,12 +1354,12 @@ TextureImporter:
       name: sheet_white2x_34
       rect:
         serializedVersion: 2
-        x: 510
-        y: 1771
-        width: 79
-        height: 50
+        x: 400
+        y: 1448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1376,12 +1376,12 @@ TextureImporter:
       name: sheet_white2x_35
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1665
-        width: 66
-        height: 66
+        x: 0
+        y: 1348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1398,12 +1398,12 @@ TextureImporter:
       name: sheet_white2x_36
       rect:
         serializedVersion: 2
-        x: 119
-        y: 1657
-        width: 66
-        height: 78
+        x: 100
+        y: 1348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1420,12 +1420,12 @@ TextureImporter:
       name: sheet_white2x_37
       rect:
         serializedVersion: 2
-        x: 229
-        y: 1665
-        width: 42
-        height: 66
+        x: 200
+        y: 1348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1442,12 +1442,12 @@ TextureImporter:
       name: sheet_white2x_38
       rect:
         serializedVersion: 2
-        x: 327
-        y: 1659
-        width: 50
-        height: 70
+        x: 300
+        y: 1348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1464,12 +1464,12 @@ TextureImporter:
       name: sheet_white2x_39
       rect:
         serializedVersion: 2
-        x: 413
-        y: 1663
-        width: 78
-        height: 66
+        x: 400
+        y: 1348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1486,12 +1486,12 @@ TextureImporter:
       name: sheet_white2x_40
       rect:
         serializedVersion: 2
-        x: 510
-        y: 1671
-        width: 79
-        height: 50
+        x: 0
+        y: 1248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1508,12 +1508,12 @@ TextureImporter:
       name: sheet_white2x_41
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1565
-        width: 66
-        height: 66
+        x: 100
+        y: 1248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1530,12 +1530,12 @@ TextureImporter:
       name: sheet_white2x_42
       rect:
         serializedVersion: 2
-        x: 117
-        y: 1563
-        width: 66
-        height: 58
+        x: 200
+        y: 1248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1552,12 +1552,12 @@ TextureImporter:
       name: sheet_white2x_43
       rect:
         serializedVersion: 2
-        x: 213
-        y: 1563
-        width: 78
-        height: 66
+        x: 300
+        y: 1248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1574,12 +1574,12 @@ TextureImporter:
       name: sheet_white2x_44
       rect:
         serializedVersion: 2
-        x: 309
-        y: 1577
-        width: 28
-        height: 44
+        x: 400
+        y: 1248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1596,12 +1596,12 @@ TextureImporter:
       name: sheet_white2x_45
       rect:
         serializedVersion: 2
-        x: 326
-        y: 1565
-        width: 50
-        height: 58
+        x: 0
+        y: 1148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1618,12 +1618,12 @@ TextureImporter:
       name: sheet_white2x_46
       rect:
         serializedVersion: 2
-        x: 365
-        y: 1577
-        width: 28
-        height: 44
+        x: 100
+        y: 1148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1640,12 +1640,12 @@ TextureImporter:
       name: sheet_white2x_47
       rect:
         serializedVersion: 2
-        x: 417
-        y: 1563
-        width: 66
-        height: 34
+        x: 200
+        y: 1148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1662,12 +1662,12 @@ TextureImporter:
       name: sheet_white2x_48
       rect:
         serializedVersion: 2
-        x: 433
-        y: 1587
-        width: 34
-        height: 42
+        x: 300
+        y: 1148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1684,12 +1684,12 @@ TextureImporter:
       name: sheet_white2x_49
       rect:
         serializedVersion: 2
-        x: 519
-        y: 1563
-        width: 66
-        height: 66
+        x: 400
+        y: 1148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1706,12 +1706,12 @@ TextureImporter:
       name: sheet_white2x_50
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1467
-        width: 18
-        height: 66
+        x: 0
+        y: 1048
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1728,12 +1728,12 @@ TextureImporter:
       name: sheet_white2x_51
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1467
-        width: 18
-        height: 66
+        x: 100
+        y: 1048
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1750,12 +1750,12 @@ TextureImporter:
       name: sheet_white2x_52
       rect:
         serializedVersion: 2
-        x: 65
-        y: 1467
-        width: 18
-        height: 66
+        x: 200
+        y: 1048
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1772,12 +1772,12 @@ TextureImporter:
       name: sheet_white2x_53
       rect:
         serializedVersion: 2
-        x: 122
-        y: 1507
-        width: 52
-        height: 31
+        x: 300
+        y: 1048
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1794,12 +1794,12 @@ TextureImporter:
       name: sheet_white2x_54
       rect:
         serializedVersion: 2
-        x: 221
-        y: 1465
-        width: 64
-        height: 58
+        x: 400
+        y: 1048
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1816,12 +1816,12 @@ TextureImporter:
       name: sheet_white2x_55
       rect:
         serializedVersion: 2
-        x: 319
-        y: 1463
-        width: 66
-        height: 66
+        x: 0
+        y: 948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1838,12 +1838,12 @@ TextureImporter:
       name: sheet_white2x_56
       rect:
         serializedVersion: 2
-        x: 423
-        y: 1465
-        width: 26
-        height: 58
+        x: 100
+        y: 948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1860,12 +1860,12 @@ TextureImporter:
       name: sheet_white2x_57
       rect:
         serializedVersion: 2
-        x: 437
-        y: 1471
-        width: 50
-        height: 46
+        x: 200
+        y: 948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1882,12 +1882,12 @@ TextureImporter:
       name: sheet_white2x_58
       rect:
         serializedVersion: 2
-        x: 125
-        y: 1458
-        width: 50
-        height: 47
+        x: 300
+        y: 948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1904,12 +1904,12 @@ TextureImporter:
       name: sheet_white2x_59
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1415
-        width: 74
-        height: 18
+        x: 400
+        y: 948
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1926,12 +1926,12 @@ TextureImporter:
       name: sheet_white2x_60
       rect:
         serializedVersion: 2
-        x: 125
-        y: 1407
-        width: 50
-        height: 24
+        x: 0
+        y: 848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1948,12 +1948,12 @@ TextureImporter:
       name: sheet_white2x_61
       rect:
         serializedVersion: 2
-        x: 229
-        y: 1383
-        width: 42
-        height: 44
+        x: 100
+        y: 848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1970,12 +1970,12 @@ TextureImporter:
       name: sheet_white2x_62
       rect:
         serializedVersion: 2
-        x: 329
-        y: 1365
-        width: 42
-        height: 66
+        x: 200
+        y: 848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1992,12 +1992,12 @@ TextureImporter:
       name: sheet_white2x_63
       rect:
         serializedVersion: 2
-        x: 417
-        y: 1371
-        width: 50
-        height: 46
+        x: 300
+        y: 848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2014,12 +2014,12 @@ TextureImporter:
       name: sheet_white2x_64
       rect:
         serializedVersion: 2
-        x: 455
-        y: 1365
-        width: 26
-        height: 58
+        x: 400
+        y: 848
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2036,12 +2036,12 @@ TextureImporter:
       name: sheet_white2x_65
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1391
-        width: 74
-        height: 18
+        x: 0
+        y: 748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2058,12 +2058,12 @@ TextureImporter:
       name: sheet_white2x_66
       rect:
         serializedVersion: 2
-        x: 125
-        y: 1358
-        width: 50
-        height: 47
+        x: 100
+        y: 748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2080,12 +2080,12 @@ TextureImporter:
       name: sheet_white2x_67
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1367
-        width: 74
-        height: 18
+        x: 200
+        y: 748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2102,12 +2102,12 @@ TextureImporter:
       name: sheet_white2x_68
       rect:
         serializedVersion: 2
-        x: 241
-        y: 1361
-        width: 20
-        height: 20
+        x: 300
+        y: 748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2124,12 +2124,12 @@ TextureImporter:
       name: sheet_white2x_69
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1262
-        width: 42
-        height: 67
+        x: 400
+        y: 748
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2146,12 +2146,12 @@ TextureImporter:
       name: sheet_white2x_70
       rect:
         serializedVersion: 2
-        x: 66
-        y: 1275
-        width: 17
-        height: 40
+        x: 0
+        y: 648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2168,12 +2168,12 @@ TextureImporter:
       name: sheet_white2x_71
       rect:
         serializedVersion: 2
-        x: 119
-        y: 1263
-        width: 66
-        height: 67
+        x: 100
+        y: 648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2190,12 +2190,12 @@ TextureImporter:
       name: sheet_white2x_72
       rect:
         serializedVersion: 2
-        x: 221
-        y: 1263
-        width: 58
-        height: 66
+        x: 200
+        y: 648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2212,12 +2212,12 @@ TextureImporter:
       name: sheet_white2x_73
       rect:
         serializedVersion: 2
-        x: 311
-        y: 1263
-        width: 74
-        height: 50
+        x: 300
+        y: 648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2234,12 +2234,12 @@ TextureImporter:
       name: sheet_white2x_74
       rect:
         serializedVersion: 2
-        x: 425
-        y: 1263
-        width: 16
-        height: 66
+        x: 400
+        y: 648
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2256,12 +2256,12 @@ TextureImporter:
       name: sheet_white2x_75
       rect:
         serializedVersion: 2
-        x: 443
-        y: 1261
-        width: 34
-        height: 68
+        x: 0
+        y: 548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2278,12 +2278,12 @@ TextureImporter:
       name: sheet_white2x_76
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1162
-        width: 42
-        height: 67
+        x: 100
+        y: 548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2300,12 +2300,12 @@ TextureImporter:
       name: sheet_white2x_77
       rect:
         serializedVersion: 2
-        x: 121
-        y: 1162
-        width: 56
-        height: 71
+        x: 200
+        y: 548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2322,12 +2322,12 @@ TextureImporter:
       name: sheet_white2x_78
       rect:
         serializedVersion: 2
-        x: 217
-        y: 1159
-        width: 70
-        height: 62
+        x: 300
+        y: 548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2344,12 +2344,12 @@ TextureImporter:
       name: sheet_white2x_79
       rect:
         serializedVersion: 2
-        x: 245
-        y: 1189
-        width: 14
-        height: 40
+        x: 400
+        y: 548
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2366,12 +2366,12 @@ TextureImporter:
       name: sheet_white2x_80
       rect:
         serializedVersion: 2
-        x: 317
-        y: 1165
-        width: 70
-        height: 58
+        x: 0
+        y: 448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2388,12 +2388,12 @@ TextureImporter:
       name: sheet_white2x_81
       rect:
         serializedVersion: 2
-        x: 441
-        y: 1185
-        width: 18
-        height: 40
+        x: 100
+        y: 448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2410,12 +2410,12 @@ TextureImporter:
       name: sheet_white2x_82
       rect:
         serializedVersion: 2
-        x: 441
-        y: 1163
-        width: 18
-        height: 18
+        x: 200
+        y: 448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2432,12 +2432,12 @@ TextureImporter:
       name: sheet_white2x_83
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1063
-        width: 58
-        height: 70
+        x: 300
+        y: 448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2454,12 +2454,12 @@ TextureImporter:
       name: sheet_white2x_84
       rect:
         serializedVersion: 2
-        x: 119
-        y: 1065
-        width: 62
-        height: 62
+        x: 400
+        y: 448
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2476,12 +2476,12 @@ TextureImporter:
       name: sheet_white2x_85
       rect:
         serializedVersion: 2
-        x: 219
-        y: 1063
-        width: 66
-        height: 66
+        x: 0
+        y: 348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2498,12 +2498,12 @@ TextureImporter:
       name: sheet_white2x_86
       rect:
         serializedVersion: 2
-        x: 319
-        y: 1102
-        width: 26
-        height: 27
+        x: 100
+        y: 348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2520,12 +2520,12 @@ TextureImporter:
       name: sheet_white2x_87
       rect:
         serializedVersion: 2
-        x: 359
-        y: 1102
-        width: 26
-        height: 27
+        x: 200
+        y: 348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2542,12 +2542,12 @@ TextureImporter:
       name: sheet_white2x_88
       rect:
         serializedVersion: 2
-        x: 423
-        y: 1067
-        width: 58
-        height: 58
+        x: 300
+        y: 348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2564,12 +2564,12 @@ TextureImporter:
       name: sheet_white2x_89
       rect:
         serializedVersion: 2
-        x: 319
-        y: 1062
-        width: 26
-        height: 27
+        x: 400
+        y: 348
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2586,12 +2586,12 @@ TextureImporter:
       name: sheet_white2x_90
       rect:
         serializedVersion: 2
-        x: 359
-        y: 1062
-        width: 26
-        height: 27
+        x: 0
+        y: 248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2608,12 +2608,12 @@ TextureImporter:
       name: sheet_white2x_91
       rect:
         serializedVersion: 2
-        x: 15
-        y: 969
-        width: 70
-        height: 58
+        x: 100
+        y: 248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2630,12 +2630,12 @@ TextureImporter:
       name: sheet_white2x_92
       rect:
         serializedVersion: 2
-        x: 117
-        y: 967
-        width: 66
-        height: 62
+        x: 200
+        y: 248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2652,12 +2652,12 @@ TextureImporter:
       name: sheet_white2x_93
       rect:
         serializedVersion: 2
-        x: 225
-        y: 962
-        width: 48
-        height: 71
+        x: 300
+        y: 248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2674,12 +2674,12 @@ TextureImporter:
       name: sheet_white2x_94
       rect:
         serializedVersion: 2
-        x: 321
-        y: 959
-        width: 62
-        height: 72
+        x: 400
+        y: 248
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2696,12 +2696,12 @@ TextureImporter:
       name: sheet_white2x_95
       rect:
         serializedVersion: 2
-        x: 423
-        y: 967
-        width: 58
-        height: 58
+        x: 0
+        y: 148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2718,12 +2718,12 @@ TextureImporter:
       name: sheet_white2x_96
       rect:
         serializedVersion: 2
-        x: 15
-        y: 869
-        width: 70
-        height: 58
+        x: 100
+        y: 148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2740,12 +2740,12 @@ TextureImporter:
       name: sheet_white2x_97
       rect:
         serializedVersion: 2
-        x: 119
-        y: 902
-        width: 26
-        height: 27
+        x: 200
+        y: 148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2762,12 +2762,12 @@ TextureImporter:
       name: sheet_white2x_98
       rect:
         serializedVersion: 2
-        x: 159
-        y: 902
-        width: 26
-        height: 27
+        x: 300
+        y: 148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2784,12 +2784,12 @@ TextureImporter:
       name: sheet_white2x_99
       rect:
         serializedVersion: 2
-        x: 221
-        y: 866
-        width: 26
-        height: 67
+        x: 400
+        y: 148
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2806,12 +2806,12 @@ TextureImporter:
       name: sheet_white2x_100
       rect:
         serializedVersion: 2
-        x: 253
-        y: 866
-        width: 26
-        height: 67
+        x: 0
+        y: 48
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2828,12 +2828,12 @@ TextureImporter:
       name: sheet_white2x_101
       rect:
         serializedVersion: 2
-        x: 321
-        y: 859
-        width: 62
-        height: 72
+        x: 100
+        y: 48
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2850,12 +2850,12 @@ TextureImporter:
       name: sheet_white2x_102
       rect:
         serializedVersion: 2
-        x: 419
-        y: 877
-        width: 66
-        height: 42
+        x: 200
+        y: 48
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2872,12 +2872,12 @@ TextureImporter:
       name: sheet_white2x_103
       rect:
         serializedVersion: 2
-        x: 119
-        y: 862
-        width: 26
-        height: 27
+        x: 300
+        y: 48
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2894,12 +2894,12 @@ TextureImporter:
       name: sheet_white2x_104
       rect:
         serializedVersion: 2
-        x: 159
-        y: 862
-        width: 26
-        height: 27
+        x: 400
+        y: 48
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2912,1221 +2912,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_105
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 763
-        width: 58
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ceb416f7fce1f07a0800000000000000
-      internalID: -6408869868180780052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_106
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 763
-        width: 58
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ae2199ad0fae6340800000000000000
-      internalID: 4859013521193643680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_107
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 771
-        width: 79
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48d57c6d8f5828de0800000000000000
-      internalID: -1332355235946472060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_108
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 759
-        width: 62
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be0b63aeb04ab2ca0800000000000000
-      internalID: -6040554104106340117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_109
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 763
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4085aff96131885e0800000000000000
-      internalID: -1907253454297212924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_110
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 662
-        width: 66
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13fa6bb0c1d034000800000000000000
-      internalID: 18873237546381105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_111
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 663
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 081ff280bc9641fd0800000000000000
-      internalID: -2372154782980771456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_112
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 663
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18e53c32cca425990800000000000000
-      internalID: -7398768997182513535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_113
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 663
-        width: 18
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af6e037fab0214670800000000000000
-      internalID: 8521127957344872186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_114
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 663
-        width: 58
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dba5a40730a2e6de0800000000000000
-      internalID: -1338085845025269059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_115
-      rect:
-        serializedVersion: 2
-        x: 317
-        y: 663
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e5116d07bd964010800000000000000
-      internalID: 1172798162505635299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_116
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 663
-        width: 66
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd4a5b897b9383770800000000000000
-      internalID: 8590679749913060571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_117
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 562
-        width: 66
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 904074f7ded0d16a0800000000000000
-      internalID: -6477005375395134455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_118
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 563
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8116e642258e07440800000000000000
-      internalID: 4931697031466869016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_119
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 563
-        width: 57
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71cb6849e3d18a290800000000000000
-      internalID: -7879015393467646953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_120
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 609
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8404cb8377ead9000800000000000000
-      internalID: 44383398419775560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_121
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 567
-        width: 66
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e63f0854d819027c0800000000000000
-      internalID: -4098115624964656274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_122
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 563
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d6b24ee970e82050800000000000000
-      internalID: 5776113336395675353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_123
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 561
-        width: 38
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e864513a36d4e890800000000000000
-      internalID: -7429577939830413084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_124
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 462
-        width: 66
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 34390912688583c00800000000000000
-      internalID: 880551060262916931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_125
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 463
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60873622e6f9a11c0800000000000000
-      internalID: -4532134779622819834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_126
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 463
-        width: 26
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1162b7d466a3ca5f0800000000000000
-      internalID: -744155627361982959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_127
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 467
-        width: 56
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92e2f6f52d2896f70800000000000000
-      internalID: 9181013155427331625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_128
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 485
-        width: 41
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c59554c043b625f0800000000000000
-      internalID: -781740394548980284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_129
-      rect:
-        serializedVersion: 2
-        x: 317
-        y: 463
-        width: 66
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 387322b8a03e859a0800000000000000
-      internalID: -6243991248925739133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_130
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 487
-        width: 34
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7149db9c79b104e0800000000000000
-      internalID: -2017127213243481732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_131
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 465
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: caf1d7e02144fec80800000000000000
-      internalID: -8291333544622612564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_132
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 362
-        width: 66
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f32f1e5d094571b0800000000000000
-      internalID: -5659537034958658574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_133
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 381
-        width: 68
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 775f2d8c98e543740800000000000000
-      internalID: 5130829821354636663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_134
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 371
-        width: 43
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ec5d76fdc5843d70800000000000000
-      internalID: 9021983073180146921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_135
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 371
-        width: 34
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7766c2de1ccab7500800000000000000
-      internalID: 395099341232825975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_136
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 365
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a256800de93ec780800000000000000
-      internalID: -8660921343308049755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_137
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 365
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e106328637c5a5f0800000000000000
-      internalID: -745971126333210139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_138
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 361
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd3a01b4daa9c28a0800000000000000
-      internalID: -6328513307282988068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_139
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 361
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25291b3cf3d4736f0800000000000000
-      internalID: -705009880398720430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_140
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 263
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7862681d8d4719580800000000000000
-      internalID: -8822141720465103225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_141
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 299
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8de6198af8490cdf0800000000000000
-      internalID: -161966241856000296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_142
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 299
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44159e77d6fa46cb0800000000000000
-      internalID: -4871576012209958588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_143
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 263
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec967f206a5526680800000000000000
-      internalID: -8763347753406862898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_144
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 263
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d63aca2947cba9b00800000000000000
-      internalID: 836187889693664109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_145
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 271
-        width: 88
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd678e06b2b0163c0800000000000000
-      internalID: -4368197882635323684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_146
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 263
-        width: 62
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 148c2faee750c7100800000000000000
-      internalID: 106966533815846977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_147
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 163
-        width: 68
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a358cdb3efe7b77e0800000000000000
-      internalID: -1766678798421686982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_148
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 159
-        width: 70
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92e6b815830ce1350800000000000000
-      internalID: 5989435902568132137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_149
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 159
-        width: 58
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c3fb4ce5cd133b50800000000000000
-      internalID: 6571629017173849030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_150
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 181
-        width: 72
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21e98bae63220e8d0800000000000000
-      internalID: -2819215747472384494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_151
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 157
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ea1dfb31a207eb10800000000000000
-      internalID: 2010578650163649250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_152
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 171
-        width: 88
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d98878f429b3db40800000000000000
-      internalID: 5463914341369154008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_153
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 63
-        width: 66
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 596f109df871d4240800000000000000
-      internalID: 4777500686298510997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_154
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 65
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11ca5af10db349470800000000000000
-      internalID: 8400404970023005201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_155
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 79
-        width: 46
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69f72a55890ea6270800000000000000
-      internalID: 8244649012731477910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_156
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 87
-        width: 66
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46e1d72807df455a0800000000000000
-      internalID: -6533318499740344732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_157
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 81
-        width: 72
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99a33fea37733a870800000000000000
-      internalID: 8692852675751131801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_158
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 57
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e60a6f1703f78e7b0800000000000000
-      internalID: -5194762324124721042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_white2x_159
-      rect:
-        serializedVersion: 2
-        x: 411
-        y: 71
-        width: 79
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 121fa0b0fdd16d7e0800000000000000
-      internalID: -1741171362131939039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fbe0741d20a2fc04eb260ed6d069a079
     internalID: 0
     vertices: []
     indices: 
@@ -4134,7 +2924,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       sheet_white2x_0: 4050899197834454385
       sheet_white2x_1: 3628109824336020743
@@ -4144,66 +2936,11 @@ TextureImporter:
       sheet_white2x_102: -4265006878985007113
       sheet_white2x_103: -439548343093522613
       sheet_white2x_104: -7915607881267510400
-      sheet_white2x_105: -6408869868180780052
-      sheet_white2x_106: 4859013521193643680
-      sheet_white2x_107: -1332355235946472060
-      sheet_white2x_108: -6040554104106340117
-      sheet_white2x_109: -1907253454297212924
       sheet_white2x_11: 764195502549903100
-      sheet_white2x_110: 18873237546381105
-      sheet_white2x_111: -2372154782980771456
-      sheet_white2x_112: -7398768997182513535
-      sheet_white2x_113: 8521127957344872186
-      sheet_white2x_114: -1338085845025269059
-      sheet_white2x_115: 1172798162505635299
-      sheet_white2x_116: 8590679749913060571
-      sheet_white2x_117: -6477005375395134455
-      sheet_white2x_118: 4931697031466869016
-      sheet_white2x_119: -7879015393467646953
       sheet_white2x_12: 4642829387096828860
-      sheet_white2x_120: 44383398419775560
-      sheet_white2x_121: -4098115624964656274
-      sheet_white2x_122: 5776113336395675353
-      sheet_white2x_123: -7429577939830413084
-      sheet_white2x_124: 880551060262916931
-      sheet_white2x_125: -4532134779622819834
-      sheet_white2x_126: -744155627361982959
-      sheet_white2x_127: 9181013155427331625
-      sheet_white2x_128: -781740394548980284
-      sheet_white2x_129: -6243991248925739133
       sheet_white2x_13: 120102536306880062
-      sheet_white2x_130: -2017127213243481732
-      sheet_white2x_131: -8291333544622612564
-      sheet_white2x_132: -5659537034958658574
-      sheet_white2x_133: 5130829821354636663
-      sheet_white2x_134: 9021983073180146921
-      sheet_white2x_135: 395099341232825975
-      sheet_white2x_136: -8660921343308049755
-      sheet_white2x_137: -745971126333210139
-      sheet_white2x_138: -6328513307282988068
-      sheet_white2x_139: -705009880398720430
       sheet_white2x_14: 2057508617555048170
-      sheet_white2x_140: -8822141720465103225
-      sheet_white2x_141: -161966241856000296
-      sheet_white2x_142: -4871576012209958588
-      sheet_white2x_143: -8763347753406862898
-      sheet_white2x_144: 836187889693664109
-      sheet_white2x_145: -4368197882635323684
-      sheet_white2x_146: 106966533815846977
-      sheet_white2x_147: -1766678798421686982
-      sheet_white2x_148: 5989435902568132137
-      sheet_white2x_149: 6571629017173849030
       sheet_white2x_15: 4244444055627963532
-      sheet_white2x_150: -2819215747472384494
-      sheet_white2x_151: 2010578650163649250
-      sheet_white2x_152: 5463914341369154008
-      sheet_white2x_153: 4777500686298510997
-      sheet_white2x_154: 8400404970023005201
-      sheet_white2x_155: 8244649012731477910
-      sheet_white2x_156: -6533318499740344732
-      sheet_white2x_157: 8692852675751131801
-      sheet_white2x_158: -5194762324124721042
-      sheet_white2x_159: -1741171362131939039
       sheet_white2x_16: 607137125430716721
       sheet_white2x_17: -3189298502725306168
       sheet_white2x_18: 8543024714726346478

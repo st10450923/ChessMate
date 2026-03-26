@@ -23,15 +23,13 @@ public class UIManager : MonoBehaviour
         if (winScreenPanel != null)
             winScreenPanel.SetActive(false);
 
-        if (switchWarningPanel != null)
-            switchWarningPanel.SetActive(false);
-
         if (replayButton != null)
             replayButton.onClick.AddListener(OnReplayClicked);
 
         if (quitButton != null)
             quitButton.onClick.AddListener(OnQuitClicked);
     }
+
     public void RefreshAll(PlayerTeam currentTurn, GamePhase currentPhase, int movesUntilSwitch)
     {
         UpdateTurn(currentTurn);
@@ -50,7 +48,8 @@ public class UIManager : MonoBehaviour
                 : blackTeamColour;
         }
 
-        UpdateSwitchCountdown(gameManager.MovesUntilSwitch);
+        if (gameManager != null)
+            UpdateSwitchCountdown(gameManager.MovesUntilSwitch);
     }
     public void UpdatePhase(GamePhase currentPhase)
     {
@@ -94,9 +93,7 @@ public class UIManager : MonoBehaviour
         }
 
         if (switchWarningPanel != null && switchWarningThreshold > 0)
-        {
             switchWarningPanel.SetActive(movesUntilSwitch <= switchWarningThreshold);
-        }
     }
     private void OnReplayClicked()
     {

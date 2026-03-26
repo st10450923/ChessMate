@@ -104,7 +104,7 @@ public class Board : MonoBehaviour
         if (gameManager.CurrentPhase == GamePhase.Checkers)
             EnforceCheckersMandatoryCapture(piece.Team);
 
-        //highlighter.ShowMoves(validMoves);
+        highlighter.ShowMoves(validMoves);
         piece.SetSelected(true);
     }
 
@@ -116,7 +116,7 @@ public class Board : MonoBehaviour
             selectedPiece = null;
         }
         validMoves.Clear();
-        //highlighter.ClearMoves();
+        highlighter.ClearMoves();
     }
 
     private void EnforceCheckersMandatoryCapture(PlayerTeam team)
@@ -261,9 +261,8 @@ public class Board : MonoBehaviour
             gameManager.SetInputLocked(false);
             selectedPiece = piece;
             validMoves = jumps;
-            //highlighter.ShowMoves(validMoves);
+            highlighter.ShowMoves(validMoves);
             piece.SetSelected(true);
-            // Do NOT call gameManager.OnMoveComplete — turn continues
         }
         else
         {
@@ -311,6 +310,12 @@ public class Board : MonoBehaviour
     {
         Deselect();
         //ResetCheckersKings();
+    }
+    public void ClearGrid()
+    {
+        for (int c = 0; c < SIZE; c++)
+            for (int r = 0; r < SIZE; r++)
+                grid[c, r] = null;
     }
 
     private void ResetCheckersKings()

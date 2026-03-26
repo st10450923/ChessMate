@@ -25,6 +25,7 @@ public class BoardSetup : MonoBehaviour
     public void Restart()
     {
         ClearAllPieces();
+        board.ClearGrid();
         SpawnAllPieces();
     }
     private void SpawnAllPieces()
