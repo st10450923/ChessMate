@@ -4,7 +4,7 @@
 **Jam Duration:** 3 Days  
 **Engine:** Unity (2D)  
 **Version Control:** GitHub  
-**Last Updated:** Day 1  
+**Last Updated:** Day 3
 
 ---
 
@@ -89,10 +89,9 @@
 - [X] Piece sprites swap between chess set and checkers disc
 
 #### UI
-- [X]Phase label: "CHESS" / "CHECKERS"
+- [X] Phase label: "CHESS" / "CHECKERS"
 - [X] Turn indicator: "Black/White"
 - [X] Switch counter: "Switch in X turn(s)"
-- [ ] Captured pieces tray
 
 #### Documents Update
 - [X] Update `refinements-changes.md` with scope shifts discovered on Day 2
@@ -108,18 +107,18 @@
 - [X] All known bugs resolved
 - [X] Visual polish: animations, transitions, board themes
 - [X] Audio: move sounds, switch SFX, win/lose jingle
-- [ ] All documents finalised and accurate
-- [ ] Build exported and tested
-- [ ] Submitted to arc 
+- [X] All documents finalised and accurate
+- [X] Build exported and tested
+- [X] Submitted to arc 
 
 ### Task List
 
 #### Polish
-- [ ] Board flip animation refined (smooth, satisfying)
-- [ ] Chess-to-checkers visual theme transition
+- [X] Board flip animation refined (smooth, satisfying)
+- [-] Chess-to-checkers visual theme transition
 - [X] Piece selection and move highlight polish
 - [X] Win screen with replay option
-- [ ] Basic main menu
+- [X] Basic main menu
 
 #### Audio
 - [X] Piece move SFX
@@ -135,19 +134,15 @@
 - [X] Test with 2 human players for balance
 
 #### Documentation Finalisation
-- [ ] `README.md` — add final build instructions, screenshots
-- [ ] `refinements-changes.md` — final log entry
+- [X] `README.md` — add final build instructions, screenshots
+- [X] `refinements-changes.md` — final log entry
 - [X] `plan.md` — mark completed tasks
 - [X] Ensure all AI credits are accurate
 
 #### Submission
-- [ ] Export Unity build (Windows + WebGL if time permits)
-- [ ] Final GitHub commit and tag: `v1.0-jam-submission`
-- [ ] Upload to ARC with screenshots and video
-
-
-- Timer per turn
-- Online multiplayer (unlikely in 3 days)
+- [X] Export Unity build (Windows + WebGL if time permits)
+- [X] Final GitHub commit and tag: `v1.0-jam-submission`
+- [X] Upload to ARC with screenshots and video
 
 ---
 
