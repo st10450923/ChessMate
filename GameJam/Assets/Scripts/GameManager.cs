@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     public void OnMoveComplete()
     {
         Debug.Log($"OnMoveComplete called — phase: {CurrentPhase}, moves this phase: {MovesThisPhase}, current turn: {CurrentTurn}");
