@@ -13,7 +13,7 @@ public class SwitchController : MonoBehaviour
     [SerializeField] private Sprite checkersBoardSprite;
     [SerializeField] private SpriteRenderer boardSpriteRenderer;
     [SerializeField] private AudioClip flipSound;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private SoundManager soundManager;
 
 
     public UnityEvent OnFlipStarted = new UnityEvent();
@@ -41,8 +41,8 @@ public class SwitchController : MonoBehaviour
 
         OnFlipStarted.Invoke();
 
-        if (audioSource != null && flipSound != null)
-            audioSource.PlayOneShot(flipSound);
+        if (soundManager != null && flipSound != null)
+            soundManager.PlaySFXClip(flipSound,boardVisualRoot, 1f);
 
         yield return StartCoroutine(AnimateBoardFlip());
 

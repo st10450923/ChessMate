@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 public enum WinReason
 {
     KingCaptured,
@@ -12,10 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SwitchController switchController;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private BoardSetup boardSetup;
-
     [SerializeField] private int movesPerPhase = 2;
 
-    // Events — subscribe in UIManager, SwitchController, etc.
 
     /// <summary>Fired when the active player changes. Passes the new turn's team.</summary>
     public UnityEvent<PlayerTeam> OnTurnChanged = new UnityEvent<PlayerTeam>();
@@ -57,6 +56,11 @@ public class GameManager : MonoBehaviour
         OnPhaseChanged.Invoke(CurrentPhase);
 
         uiManager?.RefreshAll(CurrentTurn, CurrentPhase, MovesUntilSwitch);
+    }
+    public void ReloadScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
     public void OnMoveComplete()
     {
@@ -107,7 +111,6 @@ public class GameManager : MonoBehaviour
     private void TriggerSwitch()
     {
         InputLocked = true;
-
         // Let the board clean up selection and checkers state before the flip
         board.OnPhaseWillSwitch();
 

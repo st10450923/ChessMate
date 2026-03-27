@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.Audio.ProcessorInstance;
 
 public class Board : MonoBehaviour
@@ -9,6 +10,9 @@ public class Board : MonoBehaviour
     [SerializeField] private MoveResolver moveResolver;
     [SerializeField] private MoveHighlighter highlighter;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private SoundManager soundManager;
+    [SerializeField] private AudioClip MovePieceSFX;
+    [SerializeField] private AudioClip TakePieceSFX;
 
     [SerializeField] private float squareSize = 1f;
     [SerializeField] private Vector3 boardOrigin = Vector3.zero;
@@ -73,7 +77,11 @@ public class Board : MonoBehaviour
         string entry = $"{pieceName}{fromSquare}{capture}{toSquare}";
         uiManager?.AddMoveLogEntry(entry, piece.Team);
     }
-
+    public void ReloadScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
     private string PieceInitial(ChessIdentity type) => type switch
     {
         ChessIdentity.King => "K",
@@ -105,7 +113,6 @@ public class Board : MonoBehaviour
         Piece clickedPiece = GetPiece(col, row);
         Vector2Int clickedPos = new Vector2Int(col, row);
 
-        // --- Case 1: A friendly piece is already selected ---
         if (selectedPiece != null)
         {
             // Is the click a valid destination?
@@ -122,12 +129,10 @@ public class Board : MonoBehaviour
                 return;
             }
 
-            // Clicked empty or enemy square that isn't a valid move — deselect
             Deselect();
             return;
         }
 
-        // --- Case 2: Nothing selected yet ---
         if (clickedPiece != null && clickedPiece.Team == gameManager.CurrentTurn)
         {
             SelectPiece(clickedPiece);
@@ -144,7 +149,7 @@ public class Board : MonoBehaviour
         validMoves = moveResolver.GetValidMoves(piece, this, gameManager.CurrentPhase);
 
         // Checkers: if any capture is available for the current player,
-        // only capture moves are legal (mandatory capture rule)
+        // only capture moves are legal
         if (gameManager.CurrentPhase == GamePhase.Checkers)
             EnforceCheckersMandatoryCapture(piece.Team);
 
@@ -213,13 +218,13 @@ public class Board : MonoBehaviour
             bool wasCapture = TryExecuteCheckersMove(piece, destination);
             Deselect();
             LogMove(piece, origin, destination, wasCapture);
+            soundManager.PlaySFXClip(wasCapture ? TakePieceSFX : MovePieceSFX, transform, 1f);
 
             if (wasCapture)
             {
                 TryMultiJump(piece);
                 return;
             }
-
             gameManager.OnMoveComplete();
         }
         else
@@ -230,6 +235,7 @@ public class Board : MonoBehaviour
             if (!gameOver)
             {
                 LogMove(piece, origin, destination, wasCapture);
+                soundManager.PlaySFXClip(wasCapture ? TakePieceSFX : MovePieceSFX, transform, 1f);
                 gameManager.OnMoveComplete();
             }
         }
