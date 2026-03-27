@@ -1,21 +1,20 @@
 refinements-changes.md
-ChessCheckers: The Switch — Scope Shifts & Design Decisions Log
+ChessMate — Scope Shifts & Design Decisions Log
 Running log of all design decisions, scope changes, and refinements made during development. Updated throughout the jam.
 
 DAY 1 — Foundation
 Entry 1 — Initial Concept Lock
 Date: Day 1
 Type: Design Decision
-Author: Ember Jones + Claude (AI)
+Author: Ember Jones
 Decision: Locked core concept as described in high-concept-document.md.
 Key design choices made at concept stage:
 
-2 turns per phase (1 per player) rather than a fixed timer — keeps it turn-based and predictable
-King capture (not checkmate) as the chess win condition — checkmate detection is too complex for a 3-day jam
-Piece identity hidden during checkers phase — all pieces appear as checkers discs, adding strategic uncertainty
-No AI opponent in base scope — explicitly listed as stretch goal
+2 turns per phase (1 per player)
+King capture (not checkmate) as the chess win condition — checkmate detection is too complex
+Piece identity not hidden during checkers phase
 
-AI Contribution: Claude drafted the initial high concept document and this log template. Developer reviewed and approved all content.
+AI Contribution: Claude formatted the High concept document and this log template. Developer reviewed and approved all content.
 
 Entry 2 — Switch Timing Clarification
 Date: Day 1
@@ -72,27 +71,25 @@ Rationale: No scope cuts were required on Day 2. The prototype exceeded the plan
 Remaining for Day 3: Video demo recording, visual polish, audio, bug fixing, build export, and final document updates.
 
 DAY 3 — Polish & Submission
-(Update this section during Day 3 development)
-Entry N — [Title]
+Entry 9 — Sound
 Date: Day 3
-Type: [Design Decision / Scope Cut / Bug Fix / Polish]
-Author:
-Decision:
-Rationale:
+Type: Polish
+Author: Ember Jones with little AI assistance
+Decision: Decided to add sound effects and background music. Added several classes to manage sound effects and music. Got sound effects and music from https://www.weloveindies.com/en 
+Rationale: Sound makes the game feel more polished and pleasant to play, notifying the player of events occurring. 
 
-Entry Template
-### Entry N — [Title]
-**Date:** Day X
-**Type:** [Design Decision / Scope Cut / Bug Fix / Scope Addition / Polish]
-**Author:** Developer / Developer + Claude / Claude
+Entry 10 - Settings menu
+Date: Day 3
+Type: Polish
+Author: Ember Jones, no AI assistance
+Decision: Decided to add a settings menu to control the volume of the sound effects and settings, as well as to access the main menu that I plan to add. 
+Rationale: Just makes sense to let the player control the sound, and I wanted to make the game look more professional
 
-**Decision:**
-[What was decided or changed]
-
-**Rationale:**
-[Why this decision was made]
-
-**AI Contribution (if any):**
-[What Claude or other AI tools contributed to this decision]
+Entry 11 - forced capture highlight
+Date: Day 3
+Type: Polish
+Author: Ember Jones with AI assistance for code
+Decision: Added in a highlight effect to show when the mandatory capture rule for checkers is being engaged, as before it looked like the game was bugging if the player didn't understand the mandatory capture rule
+Rationale: I wanted to make the game look more professional and clarify player feedback
 
 Log initiated with AI assistance (Claude, Anthropic). All entries reviewed and approved by developer.
