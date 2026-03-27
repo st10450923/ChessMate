@@ -26,7 +26,7 @@ Can you outmanoeuvre your opponent across two rulesets at once?
 1. Each player takes one turn per phase
 2. After **2 turns total** (1 per player), the board **Switches**
 3. The board flip animation plays — the ruleset changes
-4. After another 2 turns, it Switches back
+4. After another 2 turns, it switches back
 5. This cycle continues until a win condition is met
 
 ### Chess Phase Rules
@@ -38,11 +38,11 @@ Can you outmanoeuvre your opponent across two rulesets at once?
 
 ### Checkers Phase Rules
 
-* All pieces move diagonally, one square at a time (forward only for non-kings)
+* All pieces move diagonally, one square at a time (forward only for non-kinged pieces)
 * **Mandatory capture** — if a jump is available, you must take it
 * Multi-jump chains are allowed in a single turn
 * A piece reaching the opponent's back rank becomes a **Checkers King** (moves freely diagonally) for the duration of this Checkers phase; it reverts to its chess identity on the next Switch
-* Win by **capturing all opponent pieces** or leaving them with **no valid moves**
+* Win by **capturing all opponent pieces** or leaving them with **no valid moves** or **capturing the king**
 
 ### Switching
 
@@ -58,7 +58,7 @@ Can you outmanoeuvre your opponent across two rulesets at once?
 |-|-|
 |Select piece|Left click|
 |Move piece|Left click on highlighted square|
-|Deselect|Right click or click elsewhere|
+|Deselect|Right click|
 
 \---
 
@@ -66,7 +66,7 @@ Can you outmanoeuvre your opponent across two rulesets at once?
 
 ### Requirements
 
-* Unity 2022.3 LTS or newer
+* Unity version 6000.3.10f1 or newer
 * See `requirements.txt` for full dependency list
 
 ### Run from Source
@@ -83,41 +83,20 @@ Can you outmanoeuvre your opponent across two rulesets at once?
 
 \---
 
-## Project Structure
-
-```
-/Assets
-  /Scenes         — Unity scenes (GameBoard, MainMenu)
-  /Scripts        — All C# game logic
-    Piece.cs              — Piece data: identity, position, team
-    Board.cs              — Grid, placement, valid move queries
-    GameManager.cs        — Turn/phase management, win detection
-    SwitchController.cs   — Phase transition and animation
-    MoveHighlighter.cs    — Visual move highlighting
-  /Sprites        — Art assets (sourced from open-licence repositories)
-  /Audio          — SFX and music
-  /Prefabs        — Piece and board prefabs
-/Docs
-  high-concept-document.md
-  plan.md
-  refinements-changes.md
-requirements.txt
-README.md
-```
-
-\---
-
 ## Known Issues / Limitations
 
 * No formal check detection — King capture is the win condition
-* En passant and castling not implemented in jam version
-* No AI opponent (single-player stretch goal not reached in jam scope)
+* No AI opponent or leaderboards
+* No UI for showing captured pieces
+* No online matchmaking
+* No timer for turns
+* No surrender button
 
 \---
 
 ## Art Assets
 
-All visual assets sourced from free and open-licence repositories. No AI-generated art was used in this project, to ensure a consistent visual style.
+All visual assets sourced from free and open-licence repositories. No AI-generated art was used in this project to ensure a consistent visual style.
 
 Sources include:
 
@@ -131,7 +110,7 @@ Sources include:
 ## Credits
 
 **Developer:** Ember Jones
-**Engine:** Unity 2022.3 LTS
+**Engine:** Unity version 6000.3.10f1
 **Jam Theme:** Switch
 
 \---
@@ -142,8 +121,7 @@ This project used AI tools as part of the game jam brief requiring AI integratio
 
 |Tool|Contribution|
 |-|-|
-|**Claude (Anthropic) — claude.ai**|Game design documentation (this README, `high-concept-document.md`, `plan.md`, `requirements.txt`, `refinements-changes.md`); code architecture planning; logic design for the Switch mechanic; review and debugging assistance throughout development|
-|**GitHub Copilot** *(if used)*|In-editor C# code autocomplete|
+|**Claude (Anthropic) — claude.ai**|Game design documentation (this README, `high-concept-document.md`, `plan.md`, `requirements.txt`, `refinements-changes.md`); code planning; logic design for the Switch mechanic; Debug assistance|
 
 AI was used as a **collaborative tool** — all design decisions, final code, and creative direction were made by the developer. AI output was reviewed and edited before inclusion in the project.
 
