@@ -77,11 +77,7 @@ public class Board : MonoBehaviour
         string entry = $"{pieceName}{fromSquare}{capture}{toSquare}";
         uiManager?.AddMoveLogEntry(entry, piece.Team);
     }
-    public void ReloadScene()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
-    }
+
     private string PieceInitial(ChessIdentity type) => type switch
     {
         ChessIdentity.King => "K",
@@ -197,7 +193,25 @@ public class Board : MonoBehaviour
 
         if (anyCaptureAvailable)
         {
-            // Strip non-captures from validMoves
+            List<Vector2Int> allForcedCaptures = new List<Vector2Int>();
+
+            for (int c = 0; c < SIZE; c++)
+            {
+                for (int r = 0; r < SIZE; r++)
+                {
+                    Piece p = grid[c, r];
+                    if (p == null || p.Team != team) continue;
+
+                    List<Vector2Int> moves =
+                        moveResolver.GetValidMoves(p, this, GamePhase.Checkers);
+
+                    foreach (var move in moves)
+                        if (IsCapture(p, move))
+                            allForcedCaptures.Add(move);
+                }
+            }
+
+            highlighter.ShowMoves(allForcedCaptures);
             validMoves.RemoveAll(move => !IsCapture(selectedPiece, move));
         }
     }

@@ -109,7 +109,7 @@ MonoBehaviour:
   team: 0
   chessSprite: {fileID: 21300000, guid: c2064affe35332e4cae7401ac9e7552d, type: 3}
   checkersSprite: {fileID: 21300000, guid: 7c9cc48f0e9150248afacfacc7088000, type: 3}
-  checkersKingSprite: {fileID: 0}
+  checkersKingSprite: {fileID: 21300000, guid: 7c9cc48f0e9150248afacfacc7088000, type: 3}
   spriteRenderer: {fileID: 7765777986356290900}
   selectionIndicator: {fileID: 9014874571334823326}
   moveSpeed: 0.15
