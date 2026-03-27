@@ -13,8 +13,6 @@
 | Tool | Role | Used For |
 |------|------|----------|
 | **Claude (Anthropic)** | Primary AI assistant | Documentation, code scaffolding, logic design, debugging, review |
-| **GitHub Copilot** *(optional)* | In-editor autocomplete | Boilerplate Unity C# code |
-| **ChatGPT / Gemini** *(fallback)* | Secondary reference | Quick lookups if needed |
 
 > All AI contributions are logged in `refinements-changes.md` and credited in `README.md`.
 
@@ -67,7 +65,7 @@
 - [X] Piece identity persists and restores across phases
 - [X] Win condition detection working for both phases
 - [X] Basic UI: turn indicator, phase indicator, switch countdown
-- [ ] Video demo recorded showing AI-assisted sections
+- [X] Video demo recorded showing AI-assisted sections
 
 ### Task List
 
@@ -97,8 +95,8 @@
 - [ ] Captured pieces tray
 
 #### Documents Update
-- [ ] Update `refinements-changes.md` with scope shifts discovered on Day 2
-- [ ] Record and annotate video demo
+- [X] Update `refinements-changes.md` with scope shifts discovered on Day 2
+- [X] Record and annotate video demo
 
 ---
 
@@ -107,9 +105,9 @@
 **Goal:** Polished, bug-free, documented, ready to submit.
 
 ### Milestones
-- [ ] All known bugs resolved
-- [ ] Visual polish: animations, transitions, board themes
-- [ ] Audio: move sounds, switch SFX, win/lose jingle
+- [X] All known bugs resolved
+- [X] Visual polish: animations, transitions, board themes
+- [X] Audio: move sounds, switch SFX, win/lose jingle
 - [ ] All documents finalised and accurate
 - [ ] Build exported and tested
 - [ ] Submitted to arc 
@@ -119,51 +117,35 @@
 #### Polish
 - [ ] Board flip animation refined (smooth, satisfying)
 - [ ] Chess-to-checkers visual theme transition
-- [ ] Piece selection and move highlight polish
-- [ ] Win screen with replay option
+- [X] Piece selection and move highlight polish
+- [X] Win screen with replay option
 - [ ] Basic main menu
 
 #### Audio
-- [ ] Piece move SFX
-- [ ] Capture SFX
-- [ ] Switch SFX (dramatic board flip sound)
-- [ ] Win/lose music sting
-- [ ] Background ambient (optional)
+- [X] Piece move SFX
+- [X] Capture SFX
+- [X] Switch SFX (dramatic board flip sound)
+- [-] Win/lose music sting
+- [X] Background ambient (optional)
 
 #### Bug Fixes
-- [ ] Edge case: what happens if King is in checkers phase? (clarify rules)
-- [ ] Test all piece types across multiple switch cycles
-- [ ] Test win conditions in both phases
-- [ ] Test with 2 human players for balance
+- [X] Edge case: what happens if King is in checkers phase? (clarify rules)
+- [X] Test all piece types across multiple switch cycles
+- [X] Test win conditions in both phases
+- [X] Test with 2 human players for balance
 
 #### Documentation Finalisation
 - [ ] `README.md` — add final build instructions, screenshots
 - [ ] `refinements-changes.md` — final log entry
-- [ ] `plan.md` — mark completed tasks
-- [ ] Ensure all AI credits are accurate
+- [X] `plan.md` — mark completed tasks
+- [X] Ensure all AI credits are accurate
 
 #### Submission
 - [ ] Export Unity build (Windows + WebGL if time permits)
 - [ ] Final GitHub commit and tag: `v1.0-jam-submission`
 - [ ] Upload to ARC with screenshots and video
 
----
 
-## Risk Register
-
-| Risk | Likelihood | Mitigation |
-|------|------------|------------|
-| Checkers mandatory capture logic too complex | Medium | Simplify: make captures optional for jam scope |
-| Board flip animation janky | Low | Use simple alpha fade + swap if 3D flip is unstable |
-| Piece identity bug on switch | Medium | Thorough logging and unit tests in Day 2 |
-| Scope creep (AI opponent) | High | AI opponent is explicitly a stretch goal — cut if behind |
-| Art sourcing takes too long | Low | Use solid colour placeholders on Day 2, swap Day 3 |
-
----
-
-## Stretch Goals (only if ahead of schedule)
-- Single-player vs AI opponent (minimax or random)
-- En passant and castling
 - Timer per turn
 - Online multiplayer (unlikely in 3 days)
 
