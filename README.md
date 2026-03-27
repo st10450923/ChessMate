@@ -78,8 +78,8 @@ Can you outmanoeuvre your opponent across two rulesets at once?
 
 ### Play a Build
 
-1. Download the latest build from the [Releases](../../releases) page
-2. Extract and run `ChessCheckers.exe` (Windows) or the appropriate binary
+1. Download the ChessMateBuild from the github repository
+2. Extract and run `ChessCheckers.exe`
 
 \---
 
