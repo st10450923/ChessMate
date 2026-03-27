@@ -41,24 +41,19 @@ com.unity.inputsystem==1.6.3
 # URL: https://kenney.nl/assets/board-game-pack
 # Licence: CC0 (Public Domain)
 
-# UI Font
-# Licence: Open Font Licence (OFL)
-
 # =============================================================================
 # AUDIO ASSETS (External, Free)
 # =============================================================================
 
 # SFX
-# Source: 
+# Source: https://www.weloveindies.com/en
 # Required:
 #   - Piece move 
 #   - Piece capture
 #   - Board switch / flip 
-#   - Win jingle
-#   - Lose sting
 
 # Music 
-# Source: OpenGameArt.org or FreeMusicArchive.org
+# Source: Ohttps://www.weloveindies.com/en
 # Licence: CC0 or CC-BY
 
 # =============================================================================
@@ -66,22 +61,17 @@ com.unity.inputsystem==1.6.3
 # =============================================================================
 
 # Version control
-# Git: https://git-scm.com
 # GitHub: https://github.com
 
 # IDE
 # Visual Studio 2022 Community (recommended for Unity C#)
-# OR JetBrains Rider
 
 # AI Tools (per jam brief)
 # Claude by Anthropic: https://claude.ai
-#   Used for: documentation, code scaffolding, logic design, review
-# GitHub Copilot (optional): https://github.com/features/copilot
-#   Used for: in-editor C# autocomplete
+#   Used for: documentation templates and formatting, code scaffolding
 
-# Screen recording (Day 2 video demo)
+# Screen recording (Day 2 and 3  video demo)
 # OBS Studio: https://obsproject.com (free, open source)
-# OR Windows Game Bar (Win + G)
 
 # =============================================================================
 # NOTES
